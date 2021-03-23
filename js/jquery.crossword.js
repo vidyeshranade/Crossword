@@ -3,7 +3,7 @@
 * Jesse Weisbeck's Crossword Puzzle (for all 3 people left who want to play them)
 *
 */
-(function($){
+$(document).ready(function(){
 	$.fn.crossword = function(entryData) {
 			/*
 				Qurossword Puzzle: a javascript + jQuery crossword puzzle
@@ -25,8 +25,18 @@
 			
 			// append clues markup after puzzle wrapper div
 			// This should be moved into a configuration object
-			this.after('<div id="puzzle-clues"><h2>Across</h2><ol id="across"></ol><h2>Down</h2><ol id="down"></ol></div>');
-			
+
+			// VR: changed from ol to ul to remove the Ordered Number on list item
+			this.after('<div class="w3-container">');
+			this.after('<button id="showSoln"  class="w3-btn w3-blue  w3-left-align" style="width:10%">Show Solution</button>');
+			this.after('<button id="showSolnLastLetter"  class="w3-btn w3-blue  w3-left-align" style="width:10%">Show Last Letter</button>');
+			this.after('<button id="showSolnFirstLetter"  class="w3-btn w3-blue  w3-left-align" style="width:10%">Show First Letter</button>');
+			this.after('</div>'); //  class="w3-container"
+			this.after('<div class="w3-container">');
+			this.after('<div id="puzzle-clues"><h2>Across</h2><ul id="across" class="w3-container w3-hide"></ul><h2>Down</h2><ul id="down" class="w3-container w3-hide"></ul></div>');
+			this.after('<button id="downBtn"   onclick="showAccordian(\'down\')"    class="w3-btn w3-grey  w3-left-align" style="width:10%">Open Down</button>');
+			this.after('<button id="acrossBtn" onclick="showAccordian(\'across\')"  class="w3-btn w3-black w3-left-align style="width:10%">Open Across</button>');
+			this.after('</div>'); //  class="w3-container"
 			// initialize some variables
 			var tbl = ['<table id="puzzle">'],
 			    puzzEl = this,
@@ -64,6 +74,7 @@
 						
 						
 						// need to figure out orientation up front, before we attempt to highlight an entry
+						// 37:	left arrow, 38:	up arrow 39:	right arrow, 40:	down arrow
 						switch(e.which) {
 							case 39:
 							case 37:
@@ -76,7 +87,7 @@
 							default:
 								break;
 						}
-						
+						// if 9: tab key is pressed, 
 						if ( e.keyCode === 9) {
 							return false;
 						} else if (
@@ -88,10 +99,12 @@
 							e.keyCode === 46 ) {			
 												
 
-							
-							if (e.keyCode === 8 || e.keyCode === 46) {
+							// 46: delete, 8: backspace. VR commented: for delete
+							if (e.keyCode === 8 || e.keyCode === 46) /* && !e.target.value) */ {
 								currOri === 'across' ? nav.nextPrevNav(e, 37) : nav.nextPrevNav(e, 38); 
 							} else {
+								// VR: added as per bug#18 fix by Kiki-L
+								return true;  
 								nav.nextPrevNav(e);
 							}
 							
@@ -99,7 +112,7 @@
 							return false;
 						} else {
 							
-							console.log('input keyup: '+solvedToggle);
+							// console.log('input keyup: '+solvedToggle);
 							
 							puzInit.checkAnswer(e);
 
@@ -128,12 +141,12 @@
 									
 					});
 					
-					// tab navigation handler setup
+					// mouse click navigation handler setup
 					puzzEl.delegate('input', 'click', function(e) {
 						mode = "setting ui";
 						if (solvedToggle) solvedToggle = false;
 
-						console.log('input click: '+solvedToggle);
+						// console.log('input click: '+solvedToggle);
 					
 						nav.updateByEntry(e);
 						e.preventDefault();
@@ -168,6 +181,7 @@
 					// DELETE FOR BG
 					puzInit.buildTable();
 					puzInit.buildEntries();
+					// puzInit.showAttempts();
 										
 				},
 				
@@ -184,14 +198,26 @@
 						entries.push(i);
 						entries[i] = [];
 
-						for (var x=0, j = puzz.data[i].answer.length; x < j; ++x) {
+						// VR: replaced answer.length with DevanagriWordLength
+						for (var x=0, j = DevanagriWordLength(puzz.data[i].answer); x < j; ++x) {
 							entries[i].push(x);
 							coords = puzz.data[i].orientation === 'across' ? "" + puzz.data[i].startx++ + "," + puzz.data[i].starty + "" : "" + puzz.data[i].startx + "," + puzz.data[i].starty++ + "" ;
 							entries[i][x] = coords; 
 						}
 
 						// while we're in here, add clues to DOM!
-						$('#' + puzz.data[i].orientation).append('<li tabindex="1" data-position="' + i + '">' + puzz.data[i].clue + '</li>'); 
+						// Original Line
+						//$('#' + puzz.data[i].orientation).append('<li tabindex="1" data-position="' + i + '">' + puzz.data[i].clue + '</li>'); 
+						$('#' + puzz.data[i].orientation).append('<li tabindex="1" data-position="' + i + '">' + puzz.data[i].position + ". " + puzz.data[i].clue + '</li>');
+						
+						/*
+						if(i===0) {
+							z = 1;
+						} else {
+							z = i;
+						}
+						$('#' + puzz.data[i].orientation).append('<li value="' + z + '" tabindex="1" data-position="' + i + '">' + puzz.data[i].clue + '</li>');
+						*/
 					}				
 					
 					// Calculate rows/cols by finding max coords of each entry, then picking the highest
@@ -228,6 +254,7 @@
 					Builds entries into table
 					- Adds entry class(es) to <td> cells
 					- Adds tabindexes to <inputs> 
+					- usually tabindex="-1"  means that the element is not reachable via sequential keyboard navigation, but could be focused with JavaScript or visually by clicking with the mouse.
 				*/
 				buildEntries: function() {
 					var puzzCells = $('#puzzle td'),
@@ -240,7 +267,9 @@
 						var letters = puzz.data[x-1].answer.split('');
 
 						for (var i=0; i < entries[x-1].length; ++i) {
-							light = $(puzzCells +'[data-coords="' + entries[x-1][i] + '"]');
+							// light = $(puzzCells+'[data-coords="' + entries[x-1][i] + '"]');
+							// light = $(puzzCells[x] +'[data-coords="' + entries[x-1][i] + '"]');
+							light = $('#puzzle td[data-coords="'+entries[x-1][i]+'"]');
 							
 							// check if POSITION property of the entry on current go-round is same as previous. 
 							// If so, it means there's an across & down entry for the position.
@@ -251,10 +280,12 @@
 								};
 							}
 							
+							// VR changed: maxlength from 1 to 5 to accept multi-byte Devanagri characters.
 							if($(light).empty()){
 								$(light)
-									.addClass('entry-' + (hasOffset ? x - positionOffset : x) + ' position-' + (x-1) )
-									.append('<input maxlength="1" val="" type="text" tabindex="-1" />');
+									// .addClass('entry-' + (hasOffset ? x - positionOffset : x) + ' position-' + (x-1) )
+									.addClass('entry-' + x + ' position-' + (x-1) )
+									.append('<input maxlength="5" val="" type="text" tabindex="-1" />');
 							}
 						};
 						
@@ -263,9 +294,13 @@
 					// Put entry number in first 'light' of each entry, skipping it if already present
 					for (var i=1, p = entryCount; i < p; ++i) {
 						$groupedLights = $('.entry-' + i);
+						// VR: select first .entry-i element
 						if(!$('.entry-' + i +':eq(0) span').length){
+							// add span tag to the 0th index/ first element
+							// VR: changed puzz.data[i] to puzz.data[i-1] to fix mismatch between clue position and td position
+							// the reason/ root cause for this is .entry-i class number starts with 1. 
 							$groupedLights.eq(0)
-								.append('<span>' + puzz.data[i].position + '</span>');
+								.append('<span>' + puzz.data[i-1].position + '</span>');
 						}
 					}	
 					
@@ -275,7 +310,61 @@
 					$('.active').eq(0).select();
 										
 				},
+				/* 
+					it'll fill in the user's attempts. 
+				*/
+				showAttempts: function() {
+    
+					//console.log("entries",entries);		// co-ords of cell - col,row, ["1,1", "2,1", "3,1", "4,1"]
 				
+					for (var x=1, p = entryCount; x <= p; ++x) {
+						//var letters = puzz.data[x-1].answer.split('');
+						var attempt = puzz.data[x-1].attempt.split('');		// retrieved user's attempt - useful when rebuilding puzzle with user attempts
+						console.log(attempt);
+				
+						console.log("entries["+(x-1)+"]",entries[x-1]);		// co-ords of cell - col,row, ["1,1", "2,1", "3,1", "4,1"]
+				
+						var y = 0;
+						for (var i=0; i < entries[x-1].length; ++i) {
+							var selector =  '.position-' + (x-1) + ' input';
+							//console.log(selector);
+							
+							var co = entries[x-1][i].split(",");
+							console.log("co:",co);
+				
+							var c0 = co[0];
+							var c1 = co[1];
+							var r = 0;
+							if(c0>=c1) {
+								r = c0;
+								// try to normalise what we have
+								// col value appears first, and 
+								// has the column value of the <td> element across the row
+								// to target it properly, if it's at say, col 6 (and its the 1st letter position of the word),
+								// we need to force it back to 1
+								var t1 = r;		// could be 6
+								var t2 = t1 - 1;	// whatever value is one less ie: 5
+								var t3 = (t1 - t2) + y;	// ie: 6 - 5 = 1
+								y++;
+								r = t3;
+															
+							} else {
+								r = co[1];
+							}
+				
+							console.log("r:",r,"t1:",t1, "t2:",t2, "t3:",t3,"attempt[r-1]",attempt[r-1],"attempt[t3-1]",attempt[t3-1]);	
+				
+								
+								$(selector)[r-1].value = attempt[r-1];
+							
+						}
+
+						// var attempt = puzz.data[x-1].attempt.split('');		// retrieved user's attempt - useful when rebuilding puzzle with user attempts
+						console.log(attempt);
+
+					}
+				
+				},
 				
 				/*
 					- Checks current entry input group value against answer
@@ -289,16 +378,19 @@
 				
 					valToCheck = puzz.data[activePosition].answer.toLowerCase();
 
+					// VR: added to remove trailing space
 					currVal = $('.position-' + activePosition + ' input')
 						.map(function() {
 					  		return $(this)
 								.val()
+								.trim() 
 								.toLowerCase();
 						})
 						.get()
 						.join('');
+						
 					
-					//console.log(currVal + " " + valToCheck);
+					// console.log(currVal + " " + valToCheck);
 					if(valToCheck === currVal){	
 						$('.active')
 							.addClass('done')
@@ -311,13 +403,39 @@
 						return;
 					}
 					
-					currOri === 'across' ? nav.nextPrevNav(e, 39) : nav.nextPrevNav(e, 40);
-					
+					// VR added: to move to next cell upon five characters
+					if(e.keyCode === 32 || e.target.value.length === 5) {
+						currOri === 'across' ? nav.nextPrevNav(e, 39) : nav.nextPrevNav(e, 40);
+					}
 					//z++;
 					//console.log(z);
 					//console.log('checkAnswer() solvedToggle: '+solvedToggle);
 
-				}				
+				},
+				
+				// ADDED! check the solved array against the original puzzle data entries
+				uniqueSolved: function () {
+									
+					var uniqSolved  = _.uniq(solved);
+					// console.log(uniqSolved);
+					var numMatches = 0;
+					var numMatchedAll = 0;
+					for(var i=0; i < puzz.data.length; i++) {		// look through all entries
+						numMatchedAll++;
+						for(var a=0; a < solved.length; a++) {
+							var puzzItem = puzz.data[i];
+							var puzzAnswer = uniqSolved[a];
+							if(puzzAnswer === puzzItem.answer) {
+								numMatches++;
+							}
+						}
+					};
+					if(numMatches === numMatchedAll) {
+						console.log("puzzle solved!!!!!!!");
+					} else {
+						console.log("not yet ...");
+					}
+				}
 
 
 			}; // end puzInit object
@@ -326,7 +444,7 @@
 			var nav = {
 				
 				nextPrevNav: function(e, override) {
-
+					// console.log(e.target);
 					var len = $actives.length,
 						struck = override ? override : e.which,
 						el = $(e.target),
@@ -342,7 +460,7 @@
 					
 					selector = '.position-' + activePosition + ' input';
 					
-					//console.log('nextPrevNav activePosition & struck: '+ activePosition + ' '+struck);
+					// console.log('nextPrevNav activePosition & struck: '+ activePosition + ' '+struck);
 						
 					// move input focus/select to 'next' input
 					switch(struck) {
@@ -410,7 +528,7 @@
 					currOri = $('.clues-active').parent('ol').prop('id');
 										
 					activeClueIndex = $(clueLiEls).index(e.target);
-					//console.log('updateByNav() activeClueIndex: '+activeClueIndex);
+					// console.log('updateByNav() activeClueIndex: '+activeClueIndex);
 					
 				},
 			
@@ -447,9 +565,12 @@
 						
 						util.highlightEntry();
 						util.highlightClue();
+
+						$('.active').eq(0).focus();
+						$('.active').eq(0).select();
 						
 						//$actives.eq(0).addClass('current');	
-						//console.log('nav.updateByEntry() reports activePosition as: '+activePosition);	
+						// console.log('nav.updateByEntry() reports activePosition as: '+activePosition);	
 				}
 				
 			}; // end nav object
@@ -462,8 +583,8 @@
 					$actives = $('.active');
 					$actives.removeClass('active');
 					$actives = $('.position-' + activePosition + ' input').addClass('active');
-					$actives.eq(0).focus();
-					$actives.eq(0).select();
+					/*$actives.eq(0).focus();
+					$actives.eq(0).select();*/
 				},
 				
 				highlightClue: function() {
@@ -521,7 +642,7 @@
 							activePosition = classes[0].split('-')[1];						
 						}
 						
-						console.log('getActivePositionFromClassGroup activePosition: '+activePosition);
+						// console.log('getActivePositionFromClassGroup activePosition: '+activePosition);
 						
 				},
 				
@@ -542,13 +663,86 @@
 						return false;
 					}
 				}
-				
+
+								
 			}; // end util object
 
 				
 			puzInit.init();
-	
+
+
+			// showSolution: function(myChoice){
+			// let showSolution = function(myChoice){
+				function showSolution(myChoice) {
+		
+						for(let i = 0; i<puzz.data.length; i++){
+							// console.log($("td").hasClass('position-' + i));
+		
+							let word = puzz.data[i].answer;
+							let splittedWord = [];
 							
+							let a2 = SplitDevanagriWord(word)
+							res2 = {}
+							while (!res2.done) {
+								res2 = a2.next();
+								if (res2.value) {
+									splittedWord.push(res2.value);
+									// console.log(res2.value);
+								}
+							}
+							// console.log(splittedWord);
+							let firstCoord = $(".position-" + i).attr('data-coords');
+		
+							// VR: changed word.length to DevanagriWordLength(word)
+							dwordLength = DevanagriWordLength(word);
+							for(let j = 0; j < dwordLength; j++){
+								let newCoord;
+		
+								if (puzz.data[i].orientation === 'across'){
+									let xCoord = parseInt(firstCoord.substr(0, firstCoord.indexOf(','))) + j;
+									newCoord = xCoord + firstCoord.substr(firstCoord.indexOf(','));
+								}
+								else {
+									let yCoord = parseInt(firstCoord.substr(firstCoord.indexOf(',') + 1)) + j;
+									newCoord = firstCoord.substr(0, firstCoord.indexOf(',') + 1) + yCoord;
+								}
+		
+								// $("[data-coords='" + newCoord + "'].position-" + i + " input").val(word.substr(j, 1));
+								// $("[data-coords='" + newCoord + "'].position-" + i + " input").val(splittedWord[j]);
+		
+								switch(myChoice) 
+								{
+									case "FULL_SOLUTION":
+										$("[data-coords='" + newCoord + "'].position-" + i + " input").val(splittedWord[j]);
+										break;
+									case "FIRST":
+										if (j==0) {
+											$("[data-coords='" + newCoord + "'].position-" + i + " input").val(splittedWord[j]);
+										}
+										break;
+									case "LAST":
+										if (j==dwordLength-1) {
+											$("[data-coords='" + newCoord + "'].position-" + i + " input").val(splittedWord[j]);
+										}
+										break;
+								default:
+									void(0);
+								}
+							}
+						}
+						topFunction();
+		
+			}
+			
+			
+			$("#showSoln").click(function(){
+				showSolution('FULL_SOLUTION');
+			});
+			$("#showSolnFirstLetter").click(function(){
+				showSolution('FIRST');
+			});
+			$("#showSolnLastLetter").click(function(){
+				showSolution('LAST');
+			});
 	}
-	
-})(jQuery);
+});
