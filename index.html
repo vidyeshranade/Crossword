@@ -18,153 +18,114 @@
 	<script src="js/custom_functions.js"></script>
 	<script id="loadPuzzFile"></script>
 	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="css/custom_styles.css">
 
-	<!-- generate dynamic script src attribute value -->
-	<!-- <script type="text/javascript">
-		function getData(title)
-		{	var pass = ''
-			switch(title)
-			{
-				case "hms100":
-					document.getElementById("loadPuzzFile").src = "puzzles/script_dc_आनंदबक्षी_16_March_2021_2105.js";	
-					$( "#puzzList" ).hide( "slow", function() {
-						//alert( "You chose: " + title );
-						pass = ''
-					});											
-					break;
-				case "hms120":
-					document.getElementById("loadPuzzFile").src = "puzzles/script_dc_आनंदबक्षी_16_March_2021_2107.js";									
-					$( "#puzzList" ).hide( "slow", function() {
-						// alert( "You chose: " + title );
-						pass = ''
-					});											
-					break;
-				case "hms140":
-					document.getElementById("loadPuzzFile").src = "puzzles/script_dc_आनंदबक्षी_16_March_2021_2102.js";									
-					$( "#puzzList" ).hide( "slow", function() {
-						// alert( "You chose: " + title );
-						pass = ''
-					});											
-					break;
-				default:
-					void(0);
-			}
-			countDownTimer();
-		}
-
-		// VR: added to expand the Across/ Down clues section
-		function showAccordian(id) {
-			var x = document.getElementById(id);
-			var y = document.getElementById('acrossBtn');
-			var z = document.getElementById('downBtn');
-			if (x.className.indexOf("w3-show") == -1) {
-				x.className += " w3-show";
-				if (id === 'across') {
-					y.innerHTML = 'Close Across';					
-				} else if (id === 'down') {
-					z.innerHTML = 'Close Down';					
-				}
-			} else { 
-				x.className = x.className.replace(" w3-show", "");
-				if (id === 'across') {
-					y.innerHTML = 'Open Across';					
-				} else if (id === 'down') {
-					z.innerHTML = 'Open Down';					
-				}
-			}
-		}
-
-		// VR: added to show timer
-		function countDownTimer() {
-			// Set the date we're counting down to
-			// var countDownDate = new Date("Mar 18, 2021 12:52:00").getTime();
-			var countDownDate = new Date().getTime() + (1000 * 60  * 15) // added 15 minutes
-			// Update the count down every 1 second
-			var x = setInterval(function() {
-
-			// Get today's date and time
-			var now = new Date().getTime();
-				
-			// Find the distance between now and the count down date
-			var distance = countDownDate - now;
-				
-			// Time calculations for days, hours, minutes and seconds
-			var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-			var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-			var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-			var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-				
-			// Output the result in an element with id="countDownTimer"
-			//   document.getElementById("countDownTimer").innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
-			document.getElementById("countDownTimer").innerHTML = minutes + "m " + seconds + "s ";
-				
-			// If the count down is over, write some text 
-			if (distance < 0) {
-				clearInterval(x);
-				document.getElementById("countDownTimer").innerHTML = "EXPIRED";
-			}
-			}, 1000);
-
-		}
-	
-		//Get the button
-		var mybutton = document.getElementById("myBtn");
-
-		// When the user scrolls down 20px from the top of the document, show the button
-		window.onscroll = function() {scrollFunction()};
-
-		function scrollFunction() {
-			if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-				mybutton.style.display = "block";
-			} else {
-				mybutton.style.display = "none";
-			}
-		}
-
-		// When the user clicks on the button, scroll to the top of the document
-		function topFunction() {
-			document.body.scrollTop = 0;
-			document.documentElement.scrollTop = 0;
-		}
-
-		// VR: taken from https://deepmikoto.com/coding/3--how-to-create-back-to-top-button-using-jquery-and-some-css
-		$(function () {
-			$(window).scroll(function() {
-				if ($(this).scrollTop() - 200 > 0) {
-					$('#to-top').stop().slideDown('fast'); // show the button
-				} else {
-					$('#to-top').stop().slideUp('fast'); // hide the button
-				}
-			});
-		});
-
-		$(function () {
-			// previous detection logic
-			$("#to-top").on("click", function () {
-					$("html, body").animate({
-						scrollTop: 0
-					}, 200);
-			});
-		});
-
-
-	</script> -->
 
 
 </head>
 
 <body>
-	<select id="puzzList" onChange="getData(this.value);">
+	<div class="w3-container">
+	  
+		<div class="w3-bar w3-light-grey">
+		  <a href="instructions.html" class="w3-bar-item w3-button" target="_blank">Instructions</a>
+		  <a href="howtoplay.html" class="w3-bar-item w3-button" target="_blank">How-to-play</a>
+		  
+		  <div class="w3-dropdown-hover">
+				<button class="w3-button">Indian Languages</button>
+				<div class="w3-dropdown-content w3-bar-block w3-card-4">
+					<select id="langPuzzList" onChange="getData(this.value);">
+						<optgroup label="">
+							<option value="-">Select Crossword</option>
+						</optgroup>
+						<optgroup label="North and West">
+								<option value="ilnw001">मराठी</option>
+								<option value="ilnw002">ગુજરાતી</option>
+								<option value="ilnw003">বাংলা</option>
+								<option value="ilnw004">ਪੰਜਾਬੀ</option>
+								<option value="ilnw005">ଓଡିଆ</option>
+							</optgroup>
+						<optgroup label="South and East">
+								<option value="ilse001">ಕನ್ನಡ</option>
+								<option value="ilse001">తెలుగు</option>
+								<option value="ilse001">മലയാളം</option>
+								<option value="ilse001">தமிழ்</option>
+								<option value="ilse001">සිංහල</option>
+						</optgroup>
+					</select>	
+				</div>
+		  </div>
+
+		  <div class="w3-dropdown-hover">
+			  <button class="w3-button">Hindi Songs</button>
+				<div class="w3-dropdown-content w3-bar-block w3-card-4">
+					<select id="puzzList" onChange="getData(this.value);">
+						<optgroup label="">
+							<option value="-">Select Crossword</option>
+						</optgroup>
+						<optgroup label="Hindi Movie Song Lyrics">
+							<optgroup label="  By गीतकार">
+								<option value="hms101">आनंद बक्षी-1</option>
+								<option value="hms102">आनंद बक्षी-2</option>
+								<option value="hms103">आनंद बक्षी-3</option>
+								<option value="hms120">मजरूह सुलतानपुरी</option>
+								<option value="hms140">साहिर लुधियानवी</option>
+								<option value="hms160">==== Below entries will be Coming Soon ...></option>
+								<option value="hms161">शैलेन्द्र</option>
+								<option value="hms180">हसरत जयपुरी</option>
+								<option value="hms200">गुलज़ार</option>
+								<option value="hms220">राजेन्द्र कृष्ण</option>
+								<option value="hms240">शकिल बदायुनी</option>
+								<option value="hms260">जावेद अख्तर</option>
+								<option value="hms280">इंदिवर</option>
+								<option value="hms300">समीर</option>
+							</optgroup>
+							<optgroup label="  By गायक">
+								<option value="hms600">लता मंगेशकर</option>
+								<option value="hms620">मोहम्मद रफी</option>
+								<option value="hms640">किशोर कुमार</option>
+								<option value="hms660">आशा भोसले</option>
+								<option value="hms680">मुकेश</option>
+								<option value="hms700">लता - रफी</option>
+								<option value="hms720">जगजीत सिंग</option>
+								<option value="hms740">लता - किशोर</option>
+								<option value="hms760">जगजित सिंग</option>
+								<option value="hms780">आशा - रफी</option>
+							</optgroup>
+							<optgroup label="  By संगीतकार">
+								<option value="hms400">राहुल देव बर्मन</option>
+								<option value="hms420">शंकर जयकिशन</option>
+								<option value="hms440">लक्ष्मीकांत प्यारेलाल</option>
+								<option value="hms460">सचिन देव बर्मन</option>
+								<option value="hms480">कल्याणजी आनंदजी</option>
+								<option value="hms500">मदन मोहन</option>
+								<option value="hms520">ओ. पी. नय्यर</option>
+								<option value="hms540">रवी</option>
+								<option value="hms560">नौशाद</option>
+								<option value="hms580">राजेश रोशन</option>
+							</optgroup>
+						</optgroup>
+					</select>		
+				</div>
+		  </div>
+		</div>
+	</div>
+	  
+
+	<!-- <select id="puzzList" onChange="getData(this.value);">
 		<optgroup label="">
 			<option value="-">Select Crossword</option>
 		</optgroup>
 		<optgroup label="Hindi Movie Song Lyrics">
 			<optgroup label="  By गीतकार">
-				<option value="hms100">आनंद बक्षी</option>
+				<option value="hms101">आनंद बक्षी-1</option>
+				<option value="hms102">आनंद बक्षी-2</option>
+				<option value="hms103">आनंद बक्षी-3</option>
 				<option value="hms120">मजरूह सुलतानपुरी</option>
 				<option value="hms140">साहिर लुधियानवी</option>
-				<option value="hms160">शैलेन्द्र</option>
+				<option value="hms160">==== Below entries will be Coming Soon ...></option>
+				<option value="hms161">शैलेन्द्र</option>
 				<option value="hms180">हसरत जयपुरी</option>
 				<option value="hms200">गुलज़ार</option>
 				<option value="hms220">राजेन्द्र कृष्ण</option>
@@ -174,15 +135,32 @@
 				<option value="hms300">समीर</option>
 			</optgroup>
 			<optgroup label="  By गायक">
-				<option value="hms3">Romana</option>
-				<option value="hms4">Engleza</option>
+				<option value="hms600">लता मंगेशकर</option>
+				<option value="hms620">मोहम्मद रफी</option>
+				<option value="hms640">किशोर कुमार</option>
+				<option value="hms660">आशा भोसले</option>
+				<option value="hms680">मुकेश</option>
+				<option value="hms700">लता - रफी</option>
+				<option value="hms720">जगजीत सिंग</option>
+				<option value="hms740">लता - किशोर</option>
+				<option value="hms760">जगजित सिंग</option>
+				<option value="hms780">आशा - रफी</option>
 			</optgroup>
 			<optgroup label="  By संगीतकार">
-				<option value="hms5">Romana</option>
-				<option value="hms6">Engleza</option>
-			</optgroup>
+				<option value="hms400">राहुल देव बर्मन</option>
+				<option value="hms420">शंकर जयकिशन</option>
+				<option value="hms440">लक्ष्मीकांत प्यारेलाल</option>
+				<option value="hms460">सचिन देव बर्मन</option>
+				<option value="hms480">कल्याणजी आनंदजी</option>
+				<option value="hms500">मदन मोहन</option>
+				<option value="hms520">ओ. पी. नय्यर</option>
+				<option value="hms540">रवी</option>
+				<option value="hms560">नौशाद</option>
+				<option value="hms580">राजेश रोशन</option>
+							</optgroup>
 		</optgroup>
 	</select>
+	 -->
 	<!-- Slide show of Hindi Movie Posters-->
 	<!-- <div id="imageSlideShow">
 		<script src="https://www.w3schools.com/lib/w3.js"></script>
@@ -195,10 +173,12 @@
 	</script> -->
 	<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
 	<!-- <div id="to-top" title="back to top">↑</div> -->
-	<p id="countDownTimer"></p>
 
-	<div class="w3-panel w3-pale-blue w3-leftbar w3-border-blue">
-		<p>Spacebar: Moves to next cell.</p>
+	<div class="w3-container">
+		<div class="w3-panel w3-pale-blue w3-leftbar w3-border-blue">
+			<p>Spacebar: Moves to next cell.</p>
+			<p id="countDownTimer"></p>
+		</div>
 	</div>
 
 	<!-- <div>

@@ -3,25 +3,26 @@ function getData(title)
 {
     switch(title)
     {
-        case "hms100":
-            document.getElementById("loadPuzzFile").src = "puzzles/script_dc_आनंदबक्षी_16_March_2021_2105.js";	
-            $( "#puzzList" ).hide( "slow", function() {
-                // alert( "You time starts now...");
-            });											
-            break;
-        case "hms120":
+        case "hms101":
             document.getElementById("loadPuzzFile").src = "puzzles/script_dc_आनंदबक्षी_16_March_2021_2107.js";									
             $( "#puzzList" ).hide( "slow", function() {
-                // alert( "You time starts now...");
+                alert(  "You time starts now...");
             });											
             break;
-        case "hms140":
+        case "hms102":
             document.getElementById("loadPuzzFile").src = "puzzles/script_dc_आनंदबक्षी_16_March_2021_2102.js";									
             $( "#puzzList" ).hide( "slow", function() {
-                // alert( "You time starts now...");
+                alert(  "You time starts now...");
             });											
             break;
-        default:
+        case "hms103":
+            document.getElementById("loadPuzzFile").src = "puzzles/script_dc_आनंदबक्षी_16_March_2021_2105.js";	
+            $( "#puzzList" ).hide( "slow", function() {
+                alert(  "You time starts now...");
+            });											
+            break;
+            default:
+            alert(  "Coming soon ...");
             void(0);
     }
     countDownTimer();
@@ -71,7 +72,7 @@ function countDownTimer() {
         
     // Output the result in an element with id="countDownTimer"
     //   document.getElementById("countDownTimer").innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
-    document.getElementById("countDownTimer").innerHTML = minutes + "m " + seconds + "s ";
+    document.getElementById("countDownTimer").innerHTML = 'Time Remaining: ' + minutes + "m " + seconds + "s ";
         
     // If the count down is over, write some text 
     if (distance < 0) {
