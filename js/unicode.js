@@ -58732,7 +58732,7 @@ function IndicWordLength (devWord) {
     return wordLength
 }
 
-// VR: added to split the devanagri or Indian script word into proper/ complete letters
+// VR: added to split the devanagri script word into proper/ complete letters
 function* SplitDevanagriWord (devWord) {
     
     // Pattern is either devanagri letter or halant: U+094D : DEVANAGARI SIGN VIRAMA {halant (the preferred Hindi name)}
@@ -58750,6 +58750,39 @@ function* SplitDevanagriWord (devWord) {
         
         if ( charCategory.search(patternM) > 0 || 
              (charCategory.search(patternL) > 0  && previousCharCategory.substr(0,6) == 'U+094D') 
+           )  {
+            cluster += c;
+        } else {
+            if (cluster) {
+                yield cluster
+            }
+            cluster = c
+        }
+        previousChar = c
+    }
+    if (cluster) {
+        yield cluster
+    }
+}
+
+// VR: added to split the Indian script word into proper/ complete letters
+function* SplitIndicWord (devWord) {
+    
+    // Pattern is either Indic letter or SIGN VIRAMA {halant (the preferred Hindi name)}
+    var patternM = /SIGN|ACCENT|OM|DANDA|DIGIT/
+    var patternL = /LETTER/
+    var patternViram = /VIRAMA/
+    var pattern3 = /LATIN/
+    var charCategory = ""
+    var previousCharCategory = ""
+    let previousChar = ""
+    let cluster = ""
+    for (c of devWord.split('')) {
+        charCategory = ToCharacterNames(c, true, false)
+        previousCharCategory = ToCharacterNames(previousChar, true, false)
+        
+        if ( charCategory.search(patternM) > 0 || 
+             (charCategory.search(patternL) > 0  && previousCharCategory.search(patternViram) > 0) 
            )  {
             cluster += c;
         } else {

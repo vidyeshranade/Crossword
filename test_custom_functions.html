@@ -1,0 +1,35 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<link rel="stylesheet" type="text/css" href="Unicode.css" />
+<script type="text/javascript" src="js/unicode.js"></script>
+<title>Test Indian Script word length and splitting into clusters</title>
+</head>
+<body onload="InitialiseConversion()" onunload="FinaliseConversion()">
+<h1>Test Indian Script word length and splitting into clusters</h1>
+
+<script>
+   	var editBoxIn = document.getElementById( "edittextin" );
+	var editBoxOut = document.getElementById( "edittextout" );
+	editBoxOut.value = ToCharacterNames( editBoxIn.value, true, true );
+    alert('editBoxIn.value: ' + editBoxIn.value);
+    debugger
+</script>
+
+<table id="table3" border="0" width="100%" align="center">
+<tr>
+<td>
+<p>Enter Indian Script word text to identify:</p>
+<p>
+<input id="edittextin" type="text" style="width:500px;" autofocus="autofocus" title="Enter character or string of character Length" />
+<input id="convertbutton" type="button" value="Identify" title="Show the length of specified string" onclick="IndicWordLength(this.value)" />
+</p>
+<p><textarea id="edittextout" rows="24" cols="100" class="small serif"></textarea></p>
+</td>
+</tr>
+</table>
+<hr/>
+
+

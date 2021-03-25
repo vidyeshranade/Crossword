@@ -32,6 +32,7 @@
 		  <a href="instructions.html" class="w3-bar-item w3-button" target="_blank">Instructions</a>
 		  <a href="howtoplay.html" class="w3-bar-item w3-button" target="_blank">How-to-play</a>
 		  
+		 <!-- for Indian Languages  -->
 		  <div class="w3-dropdown-hover">
 				<button class="w3-button">Indian Languages</button>
 				<div class="w3-dropdown-content w3-bar-block w3-card-4">
@@ -57,8 +58,9 @@
 				</div>
 		  </div>
 
+		 <!-- for Hindi Songs  -->
 		  <div class="w3-dropdown-hover">
-			  <button class="w3-button">Hindi Songs</button>
+			  <button class="w3-button w3-black">Hindi Songs</button>
 				<div class="w3-dropdown-content w3-bar-block w3-card-4">
 					<select id="puzzList" onChange="getData(this.value);">
 						<optgroup label="">
@@ -109,7 +111,39 @@
 					</select>		
 				</div>
 		  </div>
+
+		  <!-- for Shared by  -->
+		  <div class="w3-dropdown-hover">
+			<button class="w3-button">Shared by</button>
+			<div class="w3-dropdown-content w3-bar-block w3-card-4">
+				<select id="sharedPuzzList" onChange="getData(this.value);">
+					<optgroup label="">
+						<option value="-">Select Crossword</option>
+					</optgroup>
+					<optgroup label="Shared by Public">
+							<option class="w3-bar-item w3-button"  value="sbp001">Mr. XYZ</option>
+							
+						</optgroup>
+					<optgroup label="Shared by Writers">
+							<option class="w3-bar-item w3-button" value="sbw001">Mr. ABC</option>
+							
+					</optgroup>
+				</select>	
+		    </div>
+		  </div>
+
+		<!-- for Science Puzzles -->
+		<div class="w3-dropdown-hover">
+			<button class="w3-button w3-black">Science Puzzles</button>
+			<div class="w3-dropdown-content w3-bar-block w3-border">
+			<a href="#" id='sp001' class="w3-bar-item w3-button" onClick="getData(this.id); return false;">Science Words-1</a>
+			<a href="#" id='sp002' class="w3-bar-item w3-button" onClick="getData(this.id); return false;">Science Words-2</a>
+			<a href="#" id='sp003' class="w3-bar-item w3-button" onClick="getData(this.id); return false;">Science Words-3</a>
+			<a href="#" id='sp004' class="w3-bar-item w3-button" onClick="getData(this.id); return false;">Science Words-4</a>
+			
+			</div>
 		</div>
+	</div>
 	</div>
 	  
 	 <!-- Slide show of Hindi Movie Posters-->

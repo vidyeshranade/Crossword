@@ -21,13 +21,31 @@ function getData(title)
             //     alert(  "You time starts now...");
             // });											
             break;
-            default:
+        case "sp001":
+            document.getElementById("loadPuzzFile").src = "puzzles/script_dc_science_25_March_2021_1931.js";	
+            alert(  "Note that Answer are in English   and Clues in Devanagari");										
+            break;
+        case "sp002":
+            document.getElementById("loadPuzzFile").src = "puzzles/script_dc_science_25_March_2021_1934.js";	
+            alert(  "Note that Answer are in English   and Clues in Devanagari");										
+            break;
+        case "sp003":
+            document.getElementById("loadPuzzFile").src = "puzzles/script_dc_science_25_March_2021_1936.js";	
+            alert(  "Note that Answer are in Devanagari and Clues in English");										
+            break;
+        case "sp004":
+            document.getElementById("loadPuzzFile").src = "puzzles/script_dc_science_25_March_2021_1937.js";	
+            alert(  "Note that Answer are in Devanagari and Clues in English");										
+            break;
+        default:
             alert(  "Coming soon ...");
             void(0);
     }
     alert( "You time started now...");
     // hide all select elements
-    $("select").hide();
+    // $("select").hide();
+    // hide all elements with class = w3-dropdown-hover
+    $('.w3-dropdown-hover').hide();
     countDownTimer();
 }
 

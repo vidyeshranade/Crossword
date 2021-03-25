@@ -199,7 +199,8 @@ $(document).ready(function(){
 						entries[i] = [];
 
 						// VR: replaced answer.length with DevanagriWordLength
-						for (var x=0, j = DevanagriWordLength(puzz.data[i].answer); x < j; ++x) {
+						// for (var x=0, j = DevanagriWordLength(puzz.data[i].answer); x < j; ++x) {
+						for (var x=0, j = IndicWordLength(puzz.data[i].answer); x < j; ++x) {
 							entries[i].push(x);
 							coords = puzz.data[i].orientation === 'across' ? "" + puzz.data[i].startx++ + "," + puzz.data[i].starty + "" : "" + puzz.data[i].startx + "," + puzz.data[i].starty++ + "" ;
 							entries[i][x] = coords; 
@@ -681,7 +682,8 @@ $(document).ready(function(){
 							let word = puzz.data[i].answer;
 							let splittedWord = [];
 							
-							let a2 = SplitDevanagriWord(word)
+							// let a2 = SplitDevanagriWord(word)
+							let a2 = SplitIndicWord(word)
 							res2 = {}
 							while (!res2.done) {
 								res2 = a2.next();
@@ -694,7 +696,8 @@ $(document).ready(function(){
 							let firstCoord = $(".position-" + i).attr('data-coords');
 		
 							// VR: changed word.length to DevanagriWordLength(word)
-							dwordLength = DevanagriWordLength(word);
+							// dwordLength = DevanagriWordLength(word);
+							dwordLength = IndicWordLength(word);
 							for(let j = 0; j < dwordLength; j++){
 								let newCoord;
 		
