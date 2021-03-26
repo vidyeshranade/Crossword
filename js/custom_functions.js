@@ -3,39 +3,121 @@ function getData(title)
 {
     switch(title)
     {
+        case "hms91":
+            document.getElementById("loadPuzzFile").src = "puzzles/script_dc_song2movie_26_March_2021_1225.js";									
+            alert(  "You have Selected Puzzle-1");										
+            document.getElementById("note2").innerHTML =  "<b>Note: </b>आपको गाने की FIRST लाइन  से मूवी को पहचानें.";
+            break;
+        case "hms92":
+            document.getElementById("loadPuzzFile").src = "puzzles/script_dc_song2movie_26_March_2021_1228.js";									
+            alert(  "You have Selected Puzzle-2");										
+            document.getElementById("note2").innerHTML =  "<b>Note: </b>आपको गाने की FIRST लाइन  से मूवी को पहचानें.";
+            break;
+        case "hms93":
+            document.getElementById("loadPuzzFile").src = "puzzles/script_dc_song2movie_26_March_2021_1229.js";									
+            alert(  "You have Selected Puzzle-3");										
+            document.getElementById("note2").innerHTML =  "<b>Note: </b>आपको गाने की FIRST लाइन  से मूवी को पहचानें.";
+            break;
         case "hms101":
             document.getElementById("loadPuzzFile").src = "puzzles/script_dc_आनंदबक्षी_16_March_2021_2107.js";									
-            // $( "#puzzList" ).hide( "slow", function() {
-            //     alert(  "You time starts now...");
-            // });											
+            alert(  "You have Selected आनंद बक्षी-1");										
+            document.getElementById("note2").innerHTML =  "<b>Note: </b>आपको SECOND लाइन की पहचान करनी होगी.";
             break;
         case "hms102":
             document.getElementById("loadPuzzFile").src = "puzzles/script_dc_आनंदबक्षी_16_March_2021_2102.js";									
-            // $( "#puzzList" ).hide( "slow", function() {
-            //     alert(  "You time starts now...");
-            // });											
+            alert(  "You have Selected आनंद बक्षी-2");										
+            document.getElementById("note2").innerHTML =  "<b>Note: </b>आपको SECOND लाइन की पहचान करनी होगी.";
             break;
         case "hms103":
-            document.getElementById("loadPuzzFile").src = "puzzles/script_dc_आनंदबक्षी_16_March_2021_2105.js";	
-            // $( "#puzzList" ).hide( "slow", function() {
-            //     alert(  "You time starts now...");
-            // });											
+            document.getElementById("loadPuzzFile").src = "puzzles/script_dc_आनंदबक्षी_26_March_2021_1529.js";	
+            alert(  "You have Selected आनंद बक्षी-3");										
+            document.getElementById("note2").innerHTML =  "<b>Note: </b>आपको SECOND लाइन की पहचान करनी होगी.";
+            break;
+        case "hms141":
+            document.getElementById("loadPuzzFile").src = "puzzles/script_dc_साहिरलुधियानवी_26_March_2021_1135.js";	
+            alert(  "You have Selected साहिर लुधियानवी-1");										
+            document.getElementById("note2").innerHTML =  "<b>Note: </b>आपको SECOND लाइन की पहचान करनी होगी.";
+            break;
+        case "hms142":
+            document.getElementById("loadPuzzFile").src = "puzzles/script_dc_साहिरलुधियानवी_26_March_2021_1136.js";	
+            alert(  "You have Selected साहिर लुधियानवी-2");										
+            document.getElementById("note2").innerHTML =  "<b>Note: </b>आपको SECOND लाइन की पहचान करनी होगी.";
+            break;
+        case "hms143":
+            document.getElementById("loadPuzzFile").src = "puzzles/script_dc_साहिरलुधियानवी_26_March_2021_1138.js";	
+            alert(  "You have Selected साहिर लुधियानवी-3");										
+            document.getElementById("note2").innerHTML =  "<b>Note: </b>आपको SECOND लाइन की पहचान करनी होगी.";
+            break;
+        case "hms201":
+            document.getElementById("loadPuzzFile").src = "puzzles/script_dc_Gulzar_and_Yogesh_26_March_2021_1243.js";	
+            alert(  "You have Selected गुलज़ार and योगेश-1");										
+            document.getElementById("note2").innerHTML =  "<b>Note: </b>फर्स्ट लाइन और नकाबपोश लाइन 2 के खिलाफ जवाब के रूप में लाइन 2 को पहचानें.";
+            break;
+        case "hms202":
+            document.getElementById("loadPuzzFile").src = "puzzles/script_dc_Gulzar_and_Yogesh_26_March_2021_1247.js";	
+            alert(  "You have Selected गुलज़ार and योगेश-2");										
+            document.getElementById("note2").innerHTML =  "<b>Note: </b>फर्स्ट लाइन और नकाबपोश लाइन 2 के खिलाफ जवाब के रूप में लाइन 2 को पहचानें.";
+            break;
+        case "hms203":
+            document.getElementById("loadPuzzFile").src = "puzzles/script_dc_Gulzar_and_Yogesh_26_March_2021_1249.js";	
+            alert(  "You have Selected गुलज़ार and योगेश-3");										
+            document.getElementById("note2").innerHTML =  "<b>Note: </b>फर्स्ट लाइन और नकाबपोश लाइन 2 के खिलाफ जवाब के रूप में लाइन 2 को पहचानें.";
             break;
         case "sp001":
             document.getElementById("loadPuzzFile").src = "puzzles/script_dc_science_25_March_2021_1931.js";	
-            alert(  "Note that Answer are in English   and Clues in Devanagari");										
+            alert(  "Note that Answers are in English   and Clues are in Devanagari");										
+            document.getElementById("note2").innerHTML =  "<b>Note: </b>Answers are in English   and Clues are in Devanagari.";
             break;
         case "sp002":
             document.getElementById("loadPuzzFile").src = "puzzles/script_dc_science_25_March_2021_1934.js";	
-            alert(  "Note that Answer are in English   and Clues in Devanagari");										
+            alert(  "Note that Answers are in English   and Clues are in Devanagari");										
+            document.getElementById("note2").innerHTML =  "<b>Note: </b>Answers are in English   and Clues are in Devanagari.";
             break;
         case "sp003":
             document.getElementById("loadPuzzFile").src = "puzzles/script_dc_science_25_March_2021_1936.js";	
-            alert(  "Note that Answer are in Devanagari and Clues in English");										
+            alert(  "Note that Answers are in Devanagari and Clues are in English");										
+            document.getElementById("note2").innerHTML =  "<b>Note: </b>Answers are in Devanagari and Clues are in English.";
             break;
         case "sp004":
             document.getElementById("loadPuzzFile").src = "puzzles/script_dc_science_25_March_2021_1937.js";	
-            alert(  "Note that Answer are in Devanagari and Clues in English");										
+            alert(  "Note that Answers are in Devanagari and Clues are in English");										
+            document.getElementById("note2").innerHTML =  "<b>Note: </b>Answers are in Devanagari and Clues are in English.";
+            break;
+        case "mg001":
+            document.getElementById("loadPuzzFile").src = "puzzles/script_dc_marathiGani_26_March_2021_1321.js";	
+            document.getElementById("note2").innerHTML =  "<b>Note: </b>गाण्याची दुसरी ओळ ओळखा.";
+            break;
+        case "mg002":
+            document.getElementById("loadPuzzFile").src = "puzzles/script_dc_marathiGani_26_March_2021_1323.js";	
+            document.getElementById("note2").innerHTML =  "<b>Note: </b>गाण्याची दुसरी ओळ ओळखा.";
+            break;
+        case "mg003":
+            document.getElementById("loadPuzzFile").src = "puzzles/script_dc_marathiGani_26_March_2021_1326.js";	
+            document.getElementById("note2").innerHTML =  "<b>Note: </b>गाण्याची दुसरी ओळ ओळखा.";
+            break;
+        case "mg004":
+            document.getElementById("loadPuzzFile").src = "puzzles/script_dc_marathiGani_26_March_2021_1328.js";	
+            document.getElementById("note2").innerHTML =  "<b>Note: </b>गाण्याची दुसरी ओळ ओळखा.";
+            break;
+        case "mg005":
+            document.getElementById("loadPuzzFile").src = "puzzles/script_dc_marathiGani_26_March_2021_1335.js";	
+            document.getElementById("note2").innerHTML =  "<b>Note: </b>गाण्याची दुसरी ओळ ओळखा.";
+            break;
+        case "mm001":
+            document.getElementById("loadPuzzFile").src = "puzzles/script_dc_marathiProverbs_26_March_2021_1257.js";	
+            document.getElementById("note2").innerHTML =  "<b>Note: </b>वर्णनावरुन म्हणी ओळखा.";
+            break;
+        case "mm002":
+            document.getElementById("loadPuzzFile").src = "puzzles/script_dc_marathiProverbs_26_March_2021_1259.js";	
+            document.getElementById("note2").innerHTML =  "<b>Note: </b>वर्णनावरुन म्हणी ओळखा.";
+            break;
+        case "mm003":
+            document.getElementById("loadPuzzFile").src = "puzzles/script_dc_marathiProverbs_26_March_2021_1300.js";	
+            document.getElementById("note2").innerHTML =  "<b>Note: </b>वर्णनावरुन म्हणी ओळखा.";
+            break;
+        case "mm004":
+            document.getElementById("loadPuzzFile").src = "puzzles/script_dc_marathiProverbs_26_March_2021_1309.js";	
+            document.getElementById("note2").innerHTML =  "<b>Note: </b>वर्णनावरुन म्हणी ओळखा.";
             break;
         default:
             alert(  "Coming soon ...");
@@ -46,6 +128,7 @@ function getData(title)
     // $("select").hide();
     // hide all elements with class = w3-dropdown-hover
     $('.w3-dropdown-hover').hide();
+    
     countDownTimer();
 }
 

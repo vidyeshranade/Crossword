@@ -20,9 +20,6 @@
 	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="css/custom_styles.css">
-
-
-
 </head>
 
 <body>
@@ -67,16 +64,26 @@
 							<option value="-">Select Crossword</option>
 						</optgroup>
 						<optgroup label="Hindi Movie Song Lyrics">
+							<optgroup label="  गाने से मूवी को पहचानें">
+								<option value="hms91">Puzzle-1</option>
+								<option value="hms92">Puzzle-2</option>
+								<option value="hms93">Puzzle-3</option>
+							</optgroup>
 							<optgroup label="  By गीतकार">
 								<option value="hms101">आनंद बक्षी-1</option>
 								<option value="hms102">आनंद बक्षी-2</option>
 								<option value="hms103">आनंद बक्षी-3</option>
-								<option value="hms120">मजरूह सुलतानपुरी</option>
-								<option value="hms140">साहिर लुधियानवी</option>
+								<option value="hms141">साहिर लुधियानवी-1</option>
+								<option value="hms142">साहिर लुधियानवी-2</option>
+								<option value="hms143">साहिर लुधियानवी-3</option>
+								<option value="hms201">गुलज़ार and योगेश-1</option>
+								<option value="hms202">गुलज़ार and योगेश-2</option>
+								<option value="hms203">गुलज़ार and योगेश-3</option>
+								<option value="hms160">-----------------></option>
 								<option value="hms160">Below entries will be Coming Soon ...></option>
+								<option value="hms120">मजरूह सुलतानपुरी</option>
 								<option value="hms161">शैलेन्द्र</option>
 								<option value="hms180">हसरत जयपुरी</option>
-								<option value="hms200">गुलज़ार</option>
 								<option value="hms220">राजेन्द्र कृष्ण</option>
 								<option value="hms240">शकिल बदायुनी</option>
 								<option value="hms260">जावेद अख्तर</option>
@@ -143,6 +150,24 @@
 			
 			</div>
 		</div>
+
+		<!-- for Marathi Gani and Mhani -->
+		<div class="w3-dropdown-hover">
+			<button class="w3-button">मराठी गाणी, म्हणी</button>
+			<div class="w3-dropdown-content w3-bar-block w3-border">
+			<a href="#" id='mg001' class="w3-bar-item w3-button" onClick="getData(this.id); return false;">गाणी-1</a>
+			<a href="#" id='mg002' class="w3-bar-item w3-button" onClick="getData(this.id); return false;">गाणी-2</a>
+			<a href="#" id='mg003' class="w3-bar-item w3-button" onClick="getData(this.id); return false;">गाणी-3</a>
+			<a href="#" id='mg004' class="w3-bar-item w3-button" onClick="getData(this.id); return false;">गाणी-4</a>
+			<a href="#" id='mg005' class="w3-bar-item w3-button" onClick="getData(this.id); return false;">गाणी-5</a>
+			<a href="#" id='mg006' class="w3-bar-item w3-button" onClick="getData(this.id); return false;">----</a>
+			<a href="#" id='mm001' class="w3-bar-item w3-button" onClick="getData(this.id); return false;">म्हणी-1</a>
+			<a href="#" id='mm002' class="w3-bar-item w3-button" onClick="getData(this.id); return false;">म्हणी-2</a>
+			<a href="#" id='mm003' class="w3-bar-item w3-button" onClick="getData(this.id); return false;">म्हणी-3</a>
+			<a href="#" id='mm004' class="w3-bar-item w3-button" onClick="getData(this.id); return false;">म्हणी-4</a>
+			
+			</div>
+		</div>
 	</div>
 	</div>
 	  
@@ -163,6 +188,7 @@
 		<div class="w3-panel w3-pale-blue w3-leftbar w3-border-blue">
 			<p>Spacebar: Moves to next cell.</p>
 			<p id="countDownTimer"></p>
+			<p id="note2"></p>
 		</div>
 	</div>
 
