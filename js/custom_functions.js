@@ -3,6 +3,11 @@ function getData(title)
 {
     switch(title)
     {
+        case "ilnw002":
+            document.getElementById("loadPuzzFile").src = "puzzles/script_dc_gujarati_by_Nishant_Patel.js";
+            alert(  "You have Selected ગુજરાતી -- Shared by Mr. Nishant Patel");	
+            document.getElementById("note2").innerHTML =  "<b>Note: </b>Identify the relations";
+            break;
         case "hms91":
             document.getElementById("loadPuzzFile").src = "puzzles/script_dc_song2movie_26_March_2021_1225.js";									
             alert(  "You have Selected Puzzle-1");										
@@ -118,10 +123,6 @@ function getData(title)
         case "mm004":
             document.getElementById("loadPuzzFile").src = "puzzles/script_dc_marathiProverbs_26_March_2021_1309.js";	
             document.getElementById("note2").innerHTML =  "<b>Note: </b>वर्णनावरुन म्हणी ओळखा.";
-            break;
-        case "ilnw002":
-            document.getElementById("loadPuzzFile").src = "puzzles/script_dc_gujarati_by_Nishant_Patel.js";	
-            document.getElementById("note2").innerHTML =  "<b>Note: </b>Identify the relations";
             break;
         default:
             alert(  "Coming soon ...");
