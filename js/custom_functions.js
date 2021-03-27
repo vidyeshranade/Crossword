@@ -121,7 +121,7 @@ function getData(title)
             break;
         case "ilnw002":
             document.getElementById("loadPuzzFile").src = "puzzles/script_dc_gujarati_by_Nishant_Patel.js";	
-            document.getElementById("note2").innerHTML =  "<b>Note: </b>वर्णनावरुन म्हणी ओळखा.";
+            document.getElementById("note2").innerHTML =  "<b>Note: </b>Identify the relations.";
             break;
         default:
             alert(  "Coming soon ...");
