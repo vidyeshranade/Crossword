@@ -119,6 +119,10 @@ function getData(title)
             document.getElementById("loadPuzzFile").src = "puzzles/script_dc_marathiProverbs_26_March_2021_1309.js";	
             document.getElementById("note2").innerHTML =  "<b>Note: </b>वर्णनावरुन म्हणी ओळखा.";
             break;
+        case "ilnw002":
+            document.getElementById("loadPuzzFile").src = "puzzles/script_dc_gujarati_by_Nishant_Patel.js";	
+            document.getElementById("note2").innerHTML =  "<b>Note: </b>वर्णनावरुन म्हणी ओळखा.";
+            break;
         default:
             alert(  "Coming soon ...");
             void(0);
