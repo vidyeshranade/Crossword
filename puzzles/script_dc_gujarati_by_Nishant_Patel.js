@@ -1,4 +1,3 @@
-
 // A javascript-enhanced crossword puzzle [c] Jesse Weisbeck, MIT/GPL
 (function($) {
 	$(function() {
