@@ -18,6 +18,11 @@ function getData(title)
             alert(  "You have Selected বাংলা -- Shared by Mr. Nitesh Roy");	
             document.getElementById("note2").innerHTML =  "<b>Note:Identify Answers in বাংলা for English Clues</b>None";
             break;
+        case "ilseTE001":
+            document.getElementById("loadPuzzFile").src = "puzzles/script_dc_bangla_by_Nitesh_Roy.js";
+            alert(  "You have Selected తెలుగు -- Shared by Mr. Chaitanya Yernagula");	
+            document.getElementById("note2").innerHTML =  "<b>Note:Identify Answers in తెలుగు for English/ తెలుగు Clues</b>None";
+            break;
         case "hms91":
             document.getElementById("loadPuzzFile").src = "puzzles/script_dc_song2movie_26_March_2021_1225.js";									
             alert(  "You have Selected Puzzle-1");										
