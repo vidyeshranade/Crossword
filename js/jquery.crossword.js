@@ -32,8 +32,9 @@ $(document).ready(function(){
 			this.after('<button id="showSolnLastLetter"  class="w3-btn w3-black  w3-left-align" style="width:10%">Show Last Letter</button>');
 			this.after('<button id="showSolnFirstLetter"  class="w3-btn w3-blue  w3-left-align" style="width:10%">Show First Letter</button>');
 			this.after('</div>'); //  class="w3-container"
+
 			this.after('<div class="w3-container">');
-			this.after('<div id="puzzle-clues"><h2>Across</h2><ul id="across" class="w3-container w3-hide"></ul><h2>Down</h2><ul id="down" class="w3-container w3-hide"></ul></div>');
+			this.after('<div id="puzzle-clues"><h4>Across</h4><ul id="across" class="w3-container w3-hide"></ul><h4>Down</h4><ul id="down" class="w3-container w3-hide"></ul></div>');
 			this.after('<button id="downBtn"   onclick="showAccordian(\'down\')"    class="w3-btn w3-grey  w3-left-align" style="width:10%">Open Down</button>');
 			this.after('<button id="acrossBtn" onclick="showAccordian(\'across\')"  class="w3-btn w3-black w3-left-align style="width:10%">Open Across</button>');
 			this.after('</div>'); //  class="w3-container"
@@ -120,6 +121,64 @@ $(document).ready(function(){
 
 						e.preventDefault();
 						return false;					
+					});
+			
+					// Set paste handlers for the 'entry' inputs that will be added presently
+					puzzEl.delegate('input', 'paste', function(e){
+						mode = 'interacting';
+						// $("[data-coords='" + newCoord + "'].position-" + i + " input").val(splittedWord[j]);
+						$("[data-coords='2,1'].position-0 input").text('स');
+						// alert('value pasted is: ' + currVal );
+						/*
+						// need to figure out orientation up front, before we attempt to highlight an entry
+						// 37:	left arrow, 38:	up arrow 39:	right arrow, 40:	down arrow
+						switch(e.which) {
+							case 39:
+							case 37:
+								currOri = 'across';
+								break;
+							case 38:
+							case 40:
+								currOri = 'down';
+								break;
+							default:
+								break;
+						}
+						// if 9: tab key is pressed, 
+						if ( e.keyCode === 9) {
+							return false;
+						} else if (
+							e.keyCode === 37 ||
+							e.keyCode === 38 ||
+							e.keyCode === 39 ||
+							e.keyCode === 40 ||
+							e.keyCode === 8 ||
+							e.keyCode === 46 ) {			
+												
+
+							// 46: delete, 8: backspace. VR commented: for delete
+							if (e.keyCode === 8 || e.keyCode === 46) // slashstar && !e.target.value) starslash 
+							{
+								currOri === 'across' ? nav.nextPrevNav(e, 37) : nav.nextPrevNav(e, 38); 
+							} else {
+								// VR: added as per bug#18 fix by Kiki-L
+								return true;  
+								nav.nextPrevNav(e);
+							}
+							
+							e.preventDefault();
+							return false;
+						} else {
+							
+							// console.log('input keyup: '+solvedToggle);
+							
+							puzInit.checkAnswer(e);
+
+						}
+						
+						e.preventDefault();
+						return false;	
+						*/				
 					});
 			
 					// tab navigation handler setup
@@ -281,12 +340,14 @@ $(document).ready(function(){
 								};
 							}
 							
-							// VR changed: maxlength from 1 to 5 to accept multi-byte Devanagri characters.
+							// VR changed: commented: maxlength from 1 to 5 to accept multi-byte Devanagri characters.
+							// VR changed: Removed maxlength="1" to accomodate multi-byte Indian Languages Script characters.
 							if($(light).empty()){
 								$(light)
 									// .addClass('entry-' + (hasOffset ? x - positionOffset : x) + ' position-' + (x-1) )
 									.addClass('entry-' + x + ' position-' + (x-1) )
-									.append('<input maxlength="5" val="" type="text" tabindex="-1" />');
+									/*.append('<input maxlength="5" val="" type="text" tabindex="-1" />');*/
+									.append('<input val="" type="text" tabindex="-1" />');
 							}
 						};
 						
@@ -404,8 +465,9 @@ $(document).ready(function(){
 						return;
 					}
 					
-					// VR added: to move to next cell upon five characters
-					if(e.keyCode === 32 || e.target.value.length === 5) {
+					// VR added: to move to next cell when either Spacebar, Enter key press or  upon five characters
+					if(e.keyCode === 32 || e.keyCode === 13) /*|| e.target.value.length === 5)*/
+					{
 						currOri === 'across' ? nav.nextPrevNav(e, 39) : nav.nextPrevNav(e, 40);
 					}
 					//z++;

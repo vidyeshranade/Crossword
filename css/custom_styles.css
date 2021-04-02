@@ -72,7 +72,7 @@ input.done {
     width: 20%;
     position: -webkit-sticky;
     position: sticky;
-    top: 20px;
+    top: 30px;
 }
 
 #puzzle-clues li{
@@ -112,4 +112,20 @@ input.done {
     color: #ffffff;
     size: 20px;
     display: none;
+}
+
+#downBtn {
+    float: right;
+    width: 10%;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 10px;
+}
+
+#acrossBtn {
+    float: left;
+    width: 10%;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 10px;
 }

@@ -26,10 +26,21 @@
 	<div class="w3-container">
 	  
 		<div class="w3-bar w3-light-grey">
-		  <a href="instructions.html" class="w3-bar-item w3-button" target="_blank">Instructions</a>
-		  <a href="howtoplay.html" class="w3-bar-item w3-button" target="_blank">How-to-play</a>
+		  <!-- <a href="instructions.html" class="w3-bar-item w3-button" target="_blank">Instructions</a> -->
+		  <!-- <a href="howtoplay.html" class="w3-bar-item w3-button w3-black" target="_blank">How-to</a> -->
 		  
-		 <!-- for Indian Languages  -->
+		<!-- for How-to -->
+		<div class="w3-dropdown-hover">
+			<button class="w3-button w3-black">How-to</button>
+			<div class="w3-dropdown-content w3-bar-block w3-border">
+				<!-- <a href="docs\howtoplay.html" class="w3-bar-item w3-button" target="_blank">Play-Video</a> -->
+				<a href="docs\instructions.html" class="w3-bar-item w3-button" target="_blank">Play-Instructions</a>
+				<a href="docs\split_the_word.html" class="w3-bar-item w3-button" target="_blank">Split-the-word</a>
+				<a href="docs\make_puzzle.html" class="w3-bar-item w3-button" target="_blank">Make Puzzle</a>
+			</div>
+		</div>
+
+		  <!-- for Indian Languages  -->
 		  <div class="w3-dropdown-hover">
 				<button class="w3-button">Indian Languages</button>
 				<div class="w3-dropdown-content w3-bar-block w3-card-4">
@@ -38,18 +49,19 @@
 							<option value="-">Select Crossword</option>
 						</optgroup>
 						<optgroup label="North and West">
-								<option value="ilnw001">मराठी</option>
-								<option value="ilnw002">ગુજરાતી -- Shared by Mr. Nishant Patel</option>
-								<option value="ilnw003">বাংলা</option>
-								<option value="ilnw004">ਪੰਜਾਬੀ</option>
-								<option value="ilnw005">ଓଡିଆ</option>
+								<option value="ilnwM001">मराठी</option>
+								<option value="ilnwG001">ગુજરાતી -- Shared by Mr. Nishant Patel</option>
+								<option value="ilnwG002">ગુજરાતી -- Shared by Mr. Mukul Mhaskar</option>
+								<option value="ilnwB001">বাংলা -- shared by Mr. NItesh Roy</option>
+								<option value="ilnwP001">ਪੰਜਾਬੀ</option>
+								<option value="ilnwO001">Oriya-ଓଡିଆ</option>
 							</optgroup>
 						<optgroup label="South and East">
-								<option value="ilse001">ಕನ್ನಡ</option>
-								<option value="ilse002">తెలుగు</option>
-								<option value="ilse003">മലയാളം</option>
-								<option value="ilse004">தமிழ்</option>
-								<option value="ilse005">සිංහල</option>
+								<option value="ilseK001">Kannada-ಕನ್ನಡ</option>
+								<option value="ilseTE001">Telugu-తెలుగు</option>
+								<option value="ilseM001">Malyalam-മലയാളം</option>
+								<option value="ilseTA001">Tamil-தமிழ்</option>
+								<option value="ilseS001">Sinhala-සිංහල</option>
 						</optgroup>
 					</select>	
 				</div>
@@ -160,7 +172,7 @@
 			<a href="#" id='mg003' class="w3-bar-item w3-button" onClick="getData(this.id); return false;">गाणी-3</a>
 			<a href="#" id='mg004' class="w3-bar-item w3-button" onClick="getData(this.id); return false;">गाणी-4</a>
 			<a href="#" id='mg005' class="w3-bar-item w3-button" onClick="getData(this.id); return false;">गाणी-5</a>
-			<a href="#" id='mg006' class="w3-bar-item w3-button" onClick="getData(this.id); return false;">----</a>
+			<a href="#" id='mg006' class="w3-bar-item w3-button" disabled onClick="getData(this.id); return false;">____</a>
 			<a href="#" id='mm001' class="w3-bar-item w3-button" onClick="getData(this.id); return false;">म्हणी-1</a>
 			<a href="#" id='mm002' class="w3-bar-item w3-button" onClick="getData(this.id); return false;">म्हणी-2</a>
 			<a href="#" id='mm003' class="w3-bar-item w3-button" onClick="getData(this.id); return false;">म्हणी-3</a>
@@ -177,6 +189,18 @@
 				<a href="#" id='spt002' class="w3-bar-item w3-button" onClick="getData(this.id); return false;">Sports-2</a>
 				<a href="#" id='spt003' class="w3-bar-item w3-button" onClick="getData(this.id); return false;">Sports-3</a>
 				<a href="#" id='spt004' class="w3-bar-item w3-button" onClick="getData(this.id); return false;">Sports-4</a>
+			</div>
+		</div>
+
+		<!-- for Misc. Puzzles -->
+		<div class="w3-dropdown-hover">
+			<button class="w3-button ">Misc. Puzzles</button>
+			<div class="w3-dropdown-content w3-bar-block w3-border">
+				<a href="#" id='misc001' class="w3-bar-item w3-button" onClick="getData(this.id); return false;">Misc-1-vbsMumbai</a>
+				<a href="#" id='misc002' class="w3-bar-item w3-button" onClick="getData(this.id); return false;">Misc-2</a>
+				<a href="#" id='misc003' class="w3-bar-item w3-button" onClick="getData(this.id); return false;">Misc-3</a>
+				<a href="#" id='misc004' class="w3-bar-item w3-button" onClick="getData(this.id); return false;">Misc-4</a>
+				
 			</div>
 		</div>
 
@@ -199,7 +223,7 @@
 
 	<div class="w3-container">
 		<div class="w3-panel w3-pale-blue w3-leftbar w3-border-blue">
-			<p>Spacebar: Moves to next cell.</p>
+			<p>F5: to reload | Spacebar or Enter Key: Moves to next cell.</p>
 			<p id="countDownTimer"></p>
 			<p id="note2"></p>
 		</div>

@@ -3,10 +3,20 @@ function getData(title)
 {
     switch(title)
     {
-        case "ilnw002":
+        case "ilnwG001":
             document.getElementById("loadPuzzFile").src = "puzzles/script_dc_gujarati_by_Nishant_Patel.js";
             alert(  "You have Selected ગુજરાતી -- Shared by Mr. Nishant Patel");	
-            document.getElementById("note2").innerHTML =  "<b>Note: </b>Identify the relations";
+            document.getElementById("note2").innerHTML =  "<b>Note: </b>Identify the relations/ સંબંધોને ઓળખો";
+            break;
+        case "ilnwG002":
+            document.getElementById("loadPuzzFile").src = "puzzles/script_dc_gujarati_by_Mukul_Mhaskar.js";
+            alert(  "You have Selected ગુજરાતી -- Shared by Mr. Mukul Mhaskar");	
+            document.getElementById("note2").innerHTML =  "<b>Note: </b>None";
+            break;
+        case "ilnwB001":
+            document.getElementById("loadPuzzFile").src = "puzzles/script_dc_bangla_by_Nitesh_Roy.js";
+            alert(  "You have Selected বাংলা -- Shared by Mr. Nitesh Roy");	
+            document.getElementById("note2").innerHTML =  "<b>Note:Identify Answers in বাংলা for English Clues</b>None";
             break;
         case "hms91":
             document.getElementById("loadPuzzFile").src = "puzzles/script_dc_song2movie_26_March_2021_1225.js";									
@@ -123,6 +133,10 @@ function getData(title)
         case "mm004":
             document.getElementById("loadPuzzFile").src = "puzzles/script_dc_marathiProverbs_26_March_2021_1309.js";	
             document.getElementById("note2").innerHTML =  "<b>Note: </b>वर्णनावरुन म्हणी ओळखा.";
+            break;
+        case "misc001":
+            document.getElementById("loadPuzzFile").src = "puzzles/script_dc_vbsMumbai.js";	
+            document.getElementById("note2").innerHTML =  "<b>Note: </b>Identify vbsMumbai Programme/ VbsMumbai कार्यक्रम को पहचानें.";
             break;
         default:
             alert(  "Coming soon ...");

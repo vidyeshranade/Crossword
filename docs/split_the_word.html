@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<link rel="stylesheet" type="text/css" href="Unicode.css" />
+<script type="text/javascript" src="js/unicode.js"></script>
+<title>Indian Script word length and splitting into clusters</title>
+</head>
+<!-- <body onload="InitialiseConversion()" onunload="FinaliseConversion()"> -->
+<body>	
+<h1>Indian Script word splitting into letters/ clusters</h1>
+
+<script>
+	function myFunction (param) { 
+		// var editBoxIn = document.getElementById( "edittextin" );
+		// editBoxIn.value = param;  //'लोगोंकीजानलेतीहै';
+		// alert('editBoxIn.value: ' + editBoxIn.value);
+		// debugger
+		// let splittedWord = [];
+		var editBoxOut = '';
+		let indicWordLength = IndicWordLength(param);
+		let a2 = SplitIndicWord(param)
+		res2 = {}
+		while (!res2.done) {
+			res2 = a2.next();
+			if (res2.value) {
+				// splittedWord.push(res2.value + '\n');
+				editBoxOut += res2.value + '\n';
+				// console.log(res2.value);
+			}
+		}
+		// editBoxOut.value = splittedWord.split();
+		editBoxOut += '+========================+';
+		editBoxOut += '\n' + '| Length of word is: ' + indicWordLength;
+		editBoxOut += '\n+========================+';
+		document.getElementById("edittextout").value = editBoxOut;
+	}
+</script>
+
+<table id="table3" border="0" width="100%" align="center">
+<tr>
+<td>
+<p>Enter Indian Script word text to Split:</p>
+<p>
+<input id="edittextin" type="text" style="width:500px;" autofocus="autofocus" title="Enter Indian Script word  to Split into letters" />
+<input id="convertbutton" type="button" value="Split" title="Show the length of specified string" onclick="myFunction(edittextin.value)" />
+</p>
+<p><textarea id="edittextout" rows="24" cols="100" class="small serif"></textarea></p>
+</td>
+</tr>
+</table>
+<hr/>
+
+

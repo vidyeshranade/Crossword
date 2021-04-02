@@ -11,9 +11,9 @@
             "file": "${workspaceFolder}/index.html"
         },
         {
-            "name": "Launch test_custom_functions.html",
+            "name": "Launch split_the_word.html",
             "type": "chrome",
             "request": "launch",
-            "file": "${workspaceFolder}/test_custom_functions.html"
+            "file": "${workspaceFolder}/split_the_word.html"
         }
 }
