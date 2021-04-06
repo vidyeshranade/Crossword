@@ -28,9 +28,10 @@ $(document).ready(function(){
 
 			// VR: changed from ol to ul to remove the Ordered Number on list item
 			this.after('<div class="w3-container">');
-			this.after('<button id="showSoln"  class="w3-btn w3-blue  w3-left-align" style="width:10%">Show Solution</button>');
-			this.after('<button id="showSolnLastLetter"  class="w3-btn w3-black  w3-left-align" style="width:10%">Show Last Letter</button>');
-			this.after('<button id="showSolnFirstLetter"  class="w3-btn w3-blue  w3-left-align" style="width:10%">Show First Letter</button>');
+			// this.after('<button id="uniqueSolved" class="w3-btn w3-blue  w3-left-align" style="width:15%">Is Solved?</button>');
+			this.after('<button id="showSoln"  class="w3-btn w3-black  w3-left-align" style="width:15%">Show Solution</button>');
+			this.after('<button id="showSolnLastLetter"  class="w3-btn w3-black w3-left-align" style="width:15%">Show Last Letter</button>');
+			this.after('<button id="showSolnFirstLetter" class="w3-btn w3-blue  w3-left-align" style="width:15%">Show First Letter</button>');
 			this.after('</div>'); //  class="w3-container"
 
 			this.after('<div class="w3-container">');
@@ -462,6 +463,9 @@ $(document).ready(function(){
 
 						solved.push(valToCheck);
 						solvedToggle = true;
+
+						// update the score
+						$("#yourScore").text("Your Score is: " + solved.length + " / " + puzz.data.length).css("color", "green", "font-weight", "bold")
 						return;
 					}
 					
@@ -479,8 +483,9 @@ $(document).ready(function(){
 				// ADDED! check the solved array against the original puzzle data entries
 				uniqueSolved: function () {
 									
-					var uniqSolved  = _.uniq(solved);
-					// console.log(uniqSolved);
+					// var uniqSolved  = _.uniq(solved);
+					var uniqSolved  = jQuery.unique(solved);
+					console.log(uniqSolved);
 					var numMatches = 0;
 					var numMatchedAll = 0;
 					for(var i=0; i < puzz.data.length; i++) {		// look through all entries
@@ -495,8 +500,10 @@ $(document).ready(function(){
 					};
 					if(numMatches === numMatchedAll) {
 						console.log("puzzle solved!!!!!!!");
+						alert("puzzle solved!!!!!!!");
 					} else {
 						console.log("not yet ...");
+						alert("not yet ...");
 					}
 				}
 
@@ -808,6 +815,9 @@ $(document).ready(function(){
 			});
 			$("#showSolnLastLetter").click(function(){
 				showSolution('LAST');
+			});
+			$("#uniqueSolved").click(function(){
+				puzInit.uniqueSolved();
 			});
 	}
 });

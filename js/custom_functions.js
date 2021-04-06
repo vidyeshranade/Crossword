@@ -1,8 +1,14 @@
 
 function getData(title)
 {
+    document.getElementById("note1").innerHTML = "F5: to reload | Spacebar or Enter Key: Moves to next cell."
     switch(title)
     {
+        case "ilnwM001":
+            document.getElementById("loadPuzzFile").src = "puzzles/script_dc_marathi_by_Vidyesh_Ranade.js";
+            alert(  "You have Selected मराठी -- Shared by Mr. Vidyesh Ranade");	
+            document.getElementById("note2").innerHTML =  "<b>Note: </b>Identify the answers in मराठी";
+            break;
         case "ilnwG001":
             document.getElementById("loadPuzzFile").src = "puzzles/script_dc_gujarati_by_Nishant_Patel.js";
             alert(  "You have Selected ગુજરાતી -- Shared by Mr. Nishant Patel");	
@@ -16,17 +22,22 @@ function getData(title)
         case "ilnwB001":
             document.getElementById("loadPuzzFile").src = "puzzles/script_dc_bangla_by_Nitesh_Roy.js";
             alert(  "You have Selected বাংলা -- Shared by Mr. Nitesh Roy");	
-            document.getElementById("note2").innerHTML =  "<b>Note:Identify Answers in বাংলা for English Clues</b>None";
+            document.getElementById("note2").innerHTML =  "<b>Note: </b>Identify Answers in বাংলা for English Clues";
             break;
         case "ilseTE001":
-            document.getElementById("loadPuzzFile").src = "puzzles/script_dc_bangla_by_Nitesh_Roy.js";
+            document.getElementById("loadPuzzFile").src = "puzzles/script_dc_bangla_by_Chaitanya_Yernagula.js";
             alert(  "You have Selected తెలుగు -- Shared by Mr. Chaitanya Yernagula");	
-            document.getElementById("note2").innerHTML =  "<b>Note:Identify Answers in తెలుగు for English/ తెలుగు Clues</b>None";
+            document.getElementById("note2").innerHTML =  "<b>Note: </b>Identify Answers in తెలుగు for తెలుగు Clues";
             break;
         case "ilnwO001":
             document.getElementById("loadPuzzFile").src = "puzzles/script_dc_bangla_by_Debabrata_Biswal.js";
             alert(  "You have Selected ଓଡିଆ -- Shared by Mr. Debabrata Biswal");	
-            document.getElementById("note2").innerHTML =  "<b>Note:Identify Answers in ଓଡିଆ for English/ ଓଡିଆ Clues</b>None";
+            document.getElementById("note2").innerHTML =  "<b>Note: </b>Identify Answers in ଓଡିଆ for English/ ଓଡିଆ Clues";
+            break;
+        case "ilseM001":
+            document.getElementById("loadPuzzFile").src = "puzzles/script_dc_Malyalam_by_Raakesh_Krishna_Kumar.js";
+            alert(  "You have Selected മലയാളം -- Shared by Mr. Raakesh Krishna Kumar");	
+            document.getElementById("note2").innerHTML =  "<b>Note: </b>Identify District of Kerala in മലയാളം for English Clues";
             break;
         case "hms91":
             document.getElementById("loadPuzzFile").src = "puzzles/script_dc_song2movie_26_March_2021_1225.js";									

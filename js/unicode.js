@@ -58718,12 +58718,19 @@ function IndicWordLength (devWord) {
     var pattern2 = /SIGN VIRAMA/   // to capture halant
     var pattern3 = /LATIN/
     var charCategory = ""
+    var charCounter = 0
     for (i of devWord.split('')) {
+        charCounter = charCounter + 1;
         charCategory = ToCharacterNames(i, true, false)
         if (charCategory.search(pattern1) > 0)  {
             wordLength++;
         } else if (charCategory.search(pattern2) > 0)  {
-            wordLength--;
+            // ignore when it is a last character
+            if (charCounter == devWord.length ) {
+                // pass
+            } else {
+                wordLength--;
+            }
         } else if (charCategory.search(pattern3) > 0)  {
             // to support LATIN word
             wordLength++;
