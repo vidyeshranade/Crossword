@@ -19,21 +19,27 @@
 		// debugger
 		// let splittedWord = [];
 		var editBoxOut = '';
+		var horizontalEntry = '';
 		let indicWordLength = IndicWordLength(param);
 		let a2 = SplitIndicWord(param)
 		res2 = {}
+		editBoxOut += '+===select and copy below text for down entry===+\n';
 		while (!res2.done) {
 			res2 = a2.next();
 			if (res2.value) {
 				// splittedWord.push(res2.value + '\n');
 				editBoxOut += res2.value + '\n';
+				horizontalEntry += res2.value + ',';
 				// console.log(res2.value);
 			}
 		}
 		// editBoxOut.value = splittedWord.split();
+		
 		editBoxOut += '+========================+';
 		editBoxOut += '\n' + '| Length of word is: ' + indicWordLength;
 		editBoxOut += '\n+========================+';
+		editBoxOut += '\n\n+===select and copy below text across entry===+\n';
+		editBoxOut += horizontalEntry.slice(0,-1);
 		document.getElementById("edittextout").value = editBoxOut;
 	}
 </script>

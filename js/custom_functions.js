@@ -159,6 +159,10 @@ function getData(title)
             document.getElementById("loadPuzzFile").src = "puzzles/script_dc_vbsMumbai.js";	
             document.getElementById("note2").innerHTML =  "<b>Note: </b>Identify vbsMumbai Programme/ VbsMumbai कार्यक्रम को पहचानें.";
             break;
+        case "spt001":
+            document.getElementById("loadPuzzFile").src = "puzzles/script_dc_sports1_by_Vidyesh_Ranade.js";	
+            document.getElementById("note2").innerHTML =  "<b>Note: </b>Identify Sports Legend/ खिलाडी को पहचानें.";
+            break;
         default:
             alert(  "Coming soon ...");
             void(0);
