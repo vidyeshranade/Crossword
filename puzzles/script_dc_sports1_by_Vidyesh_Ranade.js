@@ -176,6 +176,42 @@
          startx: 1,
          starty: 14
 },
+{
+         clue: 'India\'s first women\'s Paralympic medallist-[5]',
+         answer: 'दिपामलिक',
+         attempt: '', 
+         position: 20,
+         orientation: 'across',
+         startx: 8,
+         starty: 19
+},
+{
+         clue: 'She won a bronze medal at the 2014 Commonwealth Games in Glasgow, becoming the first Indian female gymnast-[6]',
+         answer: 'दिपाकर्माकर ',
+         attempt: '', 
+         position: 20,
+         orientation: 'down',
+         startx: 8,
+         starty: 19
+},
+{
+         clue: '2018 women\'s singles title winner in carom world championship-[5]',
+         answer: 'एसअपुर्वा',
+         attempt: '', 
+         position: 21,
+         orientation: 'down',
+         startx: 1,
+         starty: 17
+},
+{
+         clue: '2018 men\'s singles title winner in carom world championship-[5]',
+         answer: 'प्रशांतमोरे',
+         attempt: '', 
+         position: 22,
+         orientation: 'across',
+         startx: 2,
+         starty: 10
+},
    ] 
    
          // generate crossword with puzzleData into element id = puzzle-wrapper        

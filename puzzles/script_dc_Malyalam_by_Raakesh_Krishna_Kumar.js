@@ -15,7 +15,7 @@
          starty: 1
 },
 {
-         clue: 'Kannirakkuttam meaning of the kusirakut the Kannada word -[5]',
+         clue: 'Bekal fort, long costal line -[5]',
          answer: 'കാസർഗോഡ്',
          attempt: '', 
          position: 2,
@@ -24,7 +24,7 @@
          starty: 4
 },
 {
-         clue: 'XXXX Tripurantaka Temple-[4]',
+         clue: 'Birthplace of father of Malayalam language (Thunchan Parambu)-[4]',
          answer: 'മലപ്പുറം',
          attempt: '', 
          position: 3,
@@ -69,7 +69,7 @@
          starty: 6
 },
 {
-         clue: 'Royal family was in the form of Nedumporaiyoor. XXXX was known as Porainad -[4]',
+         clue: 'Malampuzha Dam -[4]',
          answer: 'പാലക്കാട്',
          attempt: '', 
          position: 8,
