@@ -7,7 +7,7 @@
 		// two entries: an across entry and a down entry
 		var puzzleData = [
 {
-	 clue: "திண்டுக்கல்is famous for ...-(6)",
+	 clue: "XXXXXX is famous for Rock Fort, Arulmigu Soundararaja Perumal Temple-(6)",
 	 answer: "திண்டுக்கல்",
 	 attempt: "", 
 	 position: 1,
@@ -16,7 +16,7 @@
 	 starty: 4
 },
 {
-	 clue: "திருப்பூர்is famous for ...-(5)",
+	 clue: "XXXXX is famous for Arulmigu Avinashi Lingeshwarar, Konganagiri Murugan and Kasi Viswanathar Temple-(5)",
 	 answer: "திருப்பூர்",
 	 attempt: "", 
 	 position: 1,
@@ -25,7 +25,7 @@
 	 starty: 4
 },
 {
-	 clue: "ஈரோடுis famous for ...-(3)",
+	 clue: "XXX is famous for Vellode Bird Sanctuary-(3)",
 	 answer: "ஈரோடு",
 	 attempt: "", 
 	 position: 2,
@@ -34,7 +34,7 @@
 	 starty: 6
 },
 {
-	 clue: "நாமக்கல்is famous for ...-(5)",
+	 clue: "XXXXX is famous for XXXX Sree Anjaneyar Temple and fort-(5)",
 	 answer: "நாமக்கல்",
 	 attempt: "", 
 	 position: 3,
@@ -43,7 +43,7 @@
 	 starty: 9
 },
 {
-	 clue: "மயிலாடுதுறைis famous for ...-(6)",
+	 clue: "XXXXXX is famous for Kalyanasundareswarar Temple-(6)",
 	 answer: "மயிலாடுதுறை",
 	 attempt: "", 
 	 position: 4,
@@ -52,7 +52,7 @@
 	 starty: 9
 },
 {
-	 clue: "வேலூர்is famous for ...-(3)",
+	 clue: "XXX is famous for Sri Lakshmi Narayani Golden Temple and fort-(3)",
 	 answer: "வேலூர்",
 	 attempt: "", 
 	 position: 5,
@@ -61,7 +61,7 @@
 	 starty: 2
 },
 {
-	 clue: "கடலூர்is famous for ...-(4)",
+	 clue: "XXXX is famous for Silver Beach-(4)",
 	 answer: "கடலூர்",
 	 attempt: "", 
 	 position: 6,
@@ -70,7 +70,7 @@
 	 starty: 9
 },
 {
-	 clue: "புதுக்கோட்டைis famous for ...-(6)",
+	 clue: "XXXXXX This town is located on the banks the Vellar River-(6)",
 	 answer: "புதுக்கோட்டை",
 	 attempt: "", 
 	 position: 7,
@@ -79,7 +79,7 @@
 	 starty: 13
 },
 {
-	 clue: "செங்கல்பட்டுis famous for ...-(7)",
+	 clue: "XXXXXXX is famous for Sri Srarda Shamrakshana Narayanan-(7)",
 	 answer: "செங்கல்பட்டு",
 	 attempt: "", 
 	 position: 8,
@@ -88,7 +88,7 @@
 	 starty: 15
 },
 {
-	 clue: "திருச்சிராப்பள்ளிis famous for ...-(9)",
+	 clue: "XXXXXXXXX is famous for sacred Hindu sites Sri Ranganathaswamy Temple-(9)",
 	 answer: "திருச்சிராப்பள்ளி",
 	 attempt: "", 
 	 position: 9,
@@ -97,7 +97,7 @@
 	 starty: 18
 },
 {
-	 clue: "திருப்பத்தூர்is famous for ...-(7)",
+	 clue: "XXXXXXX The town is known for abundant sandalwood in the surrounding hills-(7)",
 	 answer: "திருப்பத்தூர்",
 	 attempt: "", 
 	 position: 10,
@@ -106,7 +106,7 @@
 	 starty: 19
 },
 {
-	 clue: "கோயம்புத்தூர்is famous for ...-(7)",
+	 clue: "XXXXXXX is Dravidian-style Arulmigu Subramaniyaswami Temple, Marudamalai-(7)",
 	 answer: "கோயம்புத்தூர்",
 	 attempt: "", 
 	 position: 11,
@@ -115,7 +115,7 @@
 	 starty: 13
 },
 {
-	 clue: "கரூர்is famous for ...-(3)",
+	 clue: "XXX is Textile Export Hub. It is located on the banks of River Amaravathi in the Kongunadu-(3)",
 	 answer: "கரூர்",
 	 attempt: "", 
 	 position: 12,
@@ -124,7 +124,7 @@
 	 starty: 17
 },
 {
-	 clue: "இராணிப்பேட்டைis famous for ...-(7)",
+	 clue: "XXXXXXX is an industrial hub of Southern Chennai city-(7)",
 	 answer: "இராணிப்பேட்டை",
 	 attempt: "", 
 	 position: 13,
@@ -133,7 +133,7 @@
 	 starty: 22
 },
 {
-	 clue: "கள்ளக்குறிச்சிis famous for ...-(8)",
+	 clue: "XXXXXXXX is famous Gomuki Dam , Manimukta Dam , Chinnathirupathi Temple, Tenponparappi Shiva-(8)",
 	 answer: "கள்ளக்குறிச்சி",
 	 attempt: "", 
 	 position: 14,
@@ -142,7 +142,7 @@
 	 starty: 25
 },
 {
-	 clue: "காஞ்சிபுரம்is famous for ...-(6)",
+	 clue: "XXXXXX is famous The 8th-century Kailasanathar Temple, dedicated to Lord Shiva,-(6)",
 	 answer: "காஞ்சிபுரம்",
 	 attempt: "", 
 	 position: 15,
@@ -151,7 +151,7 @@
 	 starty: 23
 },
 {
-	 clue: "பெரம்பலூர்is famous for ...-(6)",
+	 clue: "XXXXXX This district is a special town in the Alathur Union Territory-(6)",
 	 answer: "பெரம்பலூர்",
 	 attempt: "", 
 	 position: 16,
@@ -160,7 +160,7 @@
 	 starty: 27
 },
 {
-	 clue: "நாகப்பட்டினம்is famous for ...-(8)",
+	 clue: "XXXXXXXX is famous for The town came to prominence during the period of Medieval Cholas-(8)",
 	 answer: "நாகப்பட்டினம்",
 	 attempt: "", 
 	 position: 17,
@@ -169,7 +169,7 @@
 	 starty: 24
 },
 {
-	 clue: "திருவாரூர்is famous for ...-(5)",
+	 clue: "XXXXX is famous for Thiruvarur Thiyagarasar Temple and Pond-(5)",
 	 answer: "திருவாரூர்",
 	 attempt: "", 
 	 position: 18,
@@ -178,7 +178,7 @@
 	 starty: 23
 },
 {
-	 clue: "விழுப்புரம்is famous for ...-(6)",
+	 clue: "XXXXXX is famous for Arignar Anna Government Arts College-(6)",
 	 answer: "விழுப்புரம்",
 	 attempt: "", 
 	 position: 19,

@@ -187,7 +187,7 @@
 	 starty: 22
 },
 {
-	 clue: "कभी खुशी कभी ग़म-(8)",
+	 clue: "KKKG-(8)",
 	 answer: "कभीखुशीकभीगम",
 	 attempt: "", 
 	 position: 19,

@@ -29,7 +29,7 @@ $(document).ready(function(){
 			// VR: changed from ol to ul to remove the Ordered Number on list item
 			this.after('<div class="w3-container">');
 			// this.after('<button id="uniqueSolved" class="w3-btn w3-blue  w3-left-align" style="width:15%">Is Solved?</button>');
-			this.after('<button id="showSoln"  class="w3-btn w3-black  w3-left-align" style="width:15%">Show Solution</button>');
+			this.after('<button id="showSoln"  class="w3-btn w3-blue  w3-left-align" style="width:15%">Show Solution</button>');
 			this.after('<button id="showSolnLastLetter"  class="w3-btn w3-black w3-left-align" style="width:15%">Show Last Letter</button>');
 			this.after('<button id="showSolnFirstLetter" class="w3-btn w3-blue  w3-left-align" style="width:15%">Show First Letter</button>');
 			this.after('</div>'); //  class="w3-container"

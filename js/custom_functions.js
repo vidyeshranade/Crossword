@@ -13,6 +13,7 @@
     countDownTimer();
 }
 // replacing getData function by below object literal to avoid error and better performance
+// taken from https://medium.com/chrisburgin/rewriting-javascript-replacing-the-switch-statement-cfff707cf045
 
   const getData2 = (title) => ({
     "ilnwM001": {

@@ -1,8 +1,9 @@
 # Indic1Crossword
 
 
-Indic1Crossword is a fork of the Crossword by Jesse Weisbeck.
-It supports various Indian Language Scripts.
+Indic1Crossword is a fork of the Original Crossword made by Jesse Weisbeck.
+This supports various Indian Language Scripts.
+
 You can share you own crossword puzzles (see video under How-to --> Make Puzzle (Video) at
 https://indic1crossword.herokuapp.com/
 
@@ -17,25 +18,34 @@ https://github.com/vidyeshranade/Crossword.git
 
 ## Features
 	- Puzzle selection using Dropdown in various Menus
-	- Clues buttons: Function as accordian (Open/ Close)
-	- Show First/ Last Letter or Full Solution buttons
-	- Top button to move to Top of the page
+		- Indian Scripts: Features puzzles based on statewise districts in various languges
+		- Hindi Songs: Features puzzles on Hindi Flim Songs, which challange to identify either 
+						song line, movie name etc.
+	- Buttons for:
+		- Clues: Function as accordian (Open/ Close)
+		- Show First/ Last Letter or Full Solution
+		- Top: to move to Top of the page
+		
 	- Spacebar/ Enter Key to move to next cell during input of answer
 	- Allows to enter multi-byte Indian Language Script Character in single cell
-	- Supports proper split of words into letters/ clusters
+	- Supports proper split of words into letters/ clusters and counts the length
 	- Split the word: Utility to use while build your own puzzle
 	
 
 ## Contributing
-Looking for a feature to add.
+I amd looking for a feature to add.
 Which should enable end user to hook the puzzle into the application.
+Past answer into puzzle instead of typing each letter
 
 ## Credits
-The real magic of puzzle rendering is from the baseline (awsome) code by Jesse Weisbeck.
-Also captured the features contributed by Mr. Kiki-L, Mr. Brad
+The real magic of puzzle rendering is from the baseline (awesome) code by Jesse Weisbeck.
+Also captured the features contributed by Mr. Kiki-L, Mr. Brad.
+
 Unicode functions taken from:
 https://www.babelstone.co.uk/Unicode/unicode.html
 
+HTML/ CSS/ JS Help, templates taken from the tutorials, examples:
+https://www.w3schools.com/
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
