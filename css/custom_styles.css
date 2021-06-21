@@ -97,6 +97,10 @@ input.done {
     border-radius: 4px;
 }
 
+#lockButton {
+    margin-left: 15px;
+}
+
 #myBtn:hover {
     background-color: #555;
 }
