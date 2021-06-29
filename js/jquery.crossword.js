@@ -29,9 +29,12 @@ $(document).ready(function(){
 			// VR: changed from ol to ul to remove the Ordered Number on list item
 			this.after('<div class="w3-container">');
 			// this.after('<button id="uniqueSolved" class="w3-btn w3-blue  w3-left-align" style="width:15%">Is Solved?</button>');
-			this.after('<button id="showSoln"  class="w3-btn w3-blue  w3-left-align" style="width:15%">Show Solution</button>');
-			this.after('<button id="showSolnLastLetter"  class="w3-btn w3-black w3-left-align" style="width:15%">Show Last Letter</button>');
-			this.after('<button id="showSolnFirstLetter" class="w3-btn w3-blue  w3-left-align" style="width:15%">Show First Letter</button>');
+			this.after('<button id="showFullSoln"  class="w3-btn w3-green w3-margin-right" style="width:15%">All Answers</button>');
+			this.after('<button id="showSolnLastLetter"  class="w3-btn w3-blue w3-margin-right" style="width:15%">All Last Letter</button>');
+			this.after('<button id="showSolnFirstLetter" class="w3-btn w3-blue  w3-margin-right" style="width:15%">All First Letter</button>');
+			this.after('<button id="showSolnLastLetterCurrent" class="w3-btn w3-lime  w3-margin-right" style="width:15%">Current Last Letter</button>');
+			this.after('<button id="showSolnFirstLetterCurrent" class="w3-btn w3-lime  w3-margin-right" style="width:15%">Current First Letter</button>');
+			this.after('<button id="showCurrentSoln"  class="w3-btn w3-amber w3-margin-right" style="width:15%">Current Answer</button>');
 			this.after('</div>'); //  class="w3-container"
 
 			this.after('<div class="w3-container">');
@@ -76,7 +79,7 @@ $(document).ready(function(){
 						
 						
 						// need to figure out orientation up front, before we attempt to highlight an entry
-						// 37:	left arrow, 38:	up arrow 39:	right arrow, 40:	down arrow
+						// 37:	left arrow, 38:	up arrow,  39:	right arrow, 40: down arrow
 						switch(e.which) {
 							case 39:
 							case 37:
@@ -128,7 +131,7 @@ $(document).ready(function(){
 					puzzEl.delegate('input', 'paste', function(e){
 						mode = 'interacting';
 						// $("[data-coords='" + newCoord + "'].position-" + i + " input").val(splittedWord[j]);
-						$("[data-coords='2,1'].position-0 input").text('स');
+						$("[data-coords='1,1'].position-0 input").text('स');
 						// alert('value pasted is: ' + currVal );
 						/*
 						// need to figure out orientation up front, before we attempt to highlight an entry
@@ -429,6 +432,45 @@ $(document).ready(function(){
 				
 				},
 				
+				// to show the solution of currently selected/ active clue
+				getCurrentSoln: function() {
+					
+					let ans = puzz.data[activePosition].answer.toLowerCase();
+					let currOrientation = puzz.data[activePosition].orientation;
+
+					let splittedWord3 = [];
+							
+					let a3 = SplitIndicWord(ans)
+					res3 = {}
+					while (!res3.done) {
+						res3 = a3.next();
+						if (res3.value) {
+							splittedWord3.push(res3.value);
+							// console.log(res3.value);
+						}
+					}
+
+					// get the first active input element, then from its parent node get the attribute value (nodeValue). attribute[0] means data-coords
+					let currentFirstCoord = $("input.active:first")[0].parentNode.attributes[0].nodeValue;
+					// get the last active input element, then from its parent node get the attribute value (nodeValue). attribute[0] means data-coords
+					// let currentLastCoord = $("input.active:last")[0].parentNode.attributes[0].nodeValue;
+
+					for(let j = 0; j<$actives.length; j++) {
+														
+						if (currOrientation === 'across') {
+							let x2Coord = parseInt(currentFirstCoord.substr(0, currentFirstCoord.indexOf(','))) + j;
+							newCoord = x2Coord + currentFirstCoord.substr(currentFirstCoord.indexOf(','));
+						}
+						else {
+							let y2Coord = parseInt(currentFirstCoord.substr(currentFirstCoord.indexOf(',') + 1)) + j;
+							newCoord = currentFirstCoord.substr(0, currentFirstCoord.indexOf(',') + 1) + y2Coord;
+						}
+						
+						$("[data-coords='" + newCoord + "'].position-" + activePosition + " input").val(splittedWord3[j]);
+						
+					}
+					
+				},
 				/*
 					- Checks current entry input group value against answer
 					- If not complete, auto-selects next input for user
@@ -453,7 +495,7 @@ $(document).ready(function(){
 						.join('');
 						
 					
-					// console.log(currVal + " " + valToCheck);
+					console.log(currVal + "|" + valToCheck);
 					if(valToCheck === currVal){	
 						$('.active')
 							.addClass('done')
@@ -470,7 +512,8 @@ $(document).ready(function(){
 					}
 					
 					// VR added: to move to next cell when either Spacebar, Enter key press or  upon five characters
-					if(e.keyCode === 32 || e.keyCode === 13) /*|| e.target.value.length === 5)*/
+					// if(e.keyCode === 32 || e.keyCode === 13) /*|| e.target.value.length === 5)*/
+					if(e.which === 32 || e.which === 13) /*|| e.target.value.length === 5)*/
 					{
 						currOri === 'across' ? nav.nextPrevNav(e, 39) : nav.nextPrevNav(e, 40);
 					}
@@ -745,8 +788,14 @@ $(document).ready(function(){
 			// let showSolution = function(myChoice){
 				function showSolution(myChoice) {
 		
+						// get the first active input element, then from its parent node get the attribute value (nodeValue). attribute[0] means data-coords
+						let currentFirstCoord = $("input.active:first")[0].parentNode.attributes[0].nodeValue;
+						// get the last active input element, then from its parent node get the attribute value (nodeValue). attribute[0] means data-coords
+						let currentLastCoord = $("input.active:last")[0].parentNode.attributes[0].nodeValue;
+
 						for(let i = 0; i<puzz.data.length; i++){
 							// console.log($("td").hasClass('position-' + i));
+							
 		
 							let word = puzz.data[i].answer;
 							let splittedWord = [];
@@ -769,7 +818,7 @@ $(document).ready(function(){
 							dwordLength = IndicWordLength(word);
 							for(let j = 0; j < dwordLength; j++){
 								let newCoord;
-		
+								// xCoord: represents column, whereas yCoord: represents row
 								if (puzz.data[i].orientation === 'across'){
 									let xCoord = parseInt(firstCoord.substr(0, firstCoord.indexOf(','))) + j;
 									newCoord = xCoord + firstCoord.substr(firstCoord.indexOf(','));
@@ -782,8 +831,21 @@ $(document).ready(function(){
 								// $("[data-coords='" + newCoord + "'].position-" + i + " input").val(word.substr(j, 1));
 								// $("[data-coords='" + newCoord + "'].position-" + i + " input").val(splittedWord[j]);
 		
+								
 								switch(myChoice) 
 								{
+																
+									
+									case "LAST_CURRENT":
+										if (newCoord == currentLastCoord) {
+											$("[data-coords='" + newCoord + "'].position-" + i + " input").val(splittedWord[j]);
+										} 
+										break;
+									case "FIRST_CURRENT":
+										if (newCoord == currentFirstCoord) {
+											$("[data-coords='" + newCoord + "'].position-" + i + " input").val(splittedWord[j]);
+										} 
+										break;
 									case "FULL_SOLUTION":
 										$("[data-coords='" + newCoord + "'].position-" + i + " input").val(splittedWord[j]);
 										break;
@@ -797,8 +859,8 @@ $(document).ready(function(){
 											$("[data-coords='" + newCoord + "'].position-" + i + " input").val(splittedWord[j]);
 										}
 										break;
-								default:
-									void(0);
+									default:
+										void(0);
 								}
 							}
 						}
@@ -807,15 +869,30 @@ $(document).ready(function(){
 			}
 			
 			
-			$("#showSoln").click(function(){
+			$("#showCurrentSoln").click(function(){
+				puzInit.getCurrentSoln();
+			});
+
+			$("#showFullSoln").click(function(){
 				showSolution('FULL_SOLUTION');
 			});
+
 			$("#showSolnFirstLetter").click(function(){
 				showSolution('FIRST');
 			});
+
+			$("#showSolnFirstLetterCurrent").click(function(){
+				showSolution('FIRST_CURRENT');
+			});
+
 			$("#showSolnLastLetter").click(function(){
 				showSolution('LAST');
 			});
+
+			$("#showSolnLastLetterCurrent").click(function(){
+				showSolution('LAST_CURRENT');
+			});
+
 			$("#uniqueSolved").click(function(){
 				puzInit.uniqueSolved();
 			});

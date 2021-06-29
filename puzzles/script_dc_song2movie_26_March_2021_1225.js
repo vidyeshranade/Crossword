@@ -187,7 +187,7 @@
 	 starty: 22
 },
 {
-	 clue: "KKKG-(8)",
+	 clue: "KKKG/ K3G-(8)",
 	 answer: "कभीखुशीकभीगम",
 	 attempt: "", 
 	 position: 19,

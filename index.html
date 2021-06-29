@@ -23,6 +23,13 @@
 </head>
 
 <body>
+	<button onclick="rotate(this)" id="lockButton" class="w3-btn w3-blue w3-margin-right">
+		Lock
+	</button>
+	<button onclick="screen.orientation.unlock()" id="unLockButton" class="w3-btn w3-blue w3-margin-right">
+		Unlock
+	</button>
+
 	<div class="w3-container">
 	  
 		<div class="w3-bar w3-light-grey">
@@ -221,12 +228,6 @@
 		w3.slideshow(".moviePosters", 1500);
 	</script> -->
 	<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
-	<button onclick="rotate(this)" id="lockButton">
-		Lock
-	</button>
-	<button onclick="screen.orientation.unlock()">
-		Unlock
-	</button>
 
 	<!-- <div id="to-top" title="back to top">↑</div> -->
 
@@ -267,6 +268,7 @@
 	}
 
 	// Code for Lock, Unlock and change orientation
+	// Taken from: https://w3c.github.io/screen-orientation/#locking-to-a-specific-orientation-and-unlocking
 
 	function fullScreenCheck() {
 	if (document.fullscreenElement) return;
@@ -296,7 +298,7 @@
 
 	function show() {
 	const { type, angle } = screen.orientation;
-	console.log(`Orientation type is ${type} & angle is ${angle}.`);
+	// console.log(`Orientation type is ${type} & angle is ${angle}.`);
 	}
 
 	screen.orientation.addEventListener("change", () => {

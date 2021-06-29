@@ -1,6 +1,11 @@
 /*
     Default puzzle styling
 */
+
+* {
+    box-sizing: border-box;
+  }
+  
 body {
     font: 62.5%/1.3em Helvetica, sans-serif;
     width: 90.3%;
@@ -97,15 +102,11 @@ input.done {
     border-radius: 4px;
 }
 
-#lockButton {
-    margin-left: 15px;
-}
-
 #myBtn:hover {
     background-color: #555;
 }
 
-#to-top {
+/* #to-top {
     position: fixed;
     right: 20px;
     bottom: 20px;
@@ -116,10 +117,16 @@ input.done {
     color: #ffffff;
     size: 20px;
     display: none;
+} */
+
+
+#lockButton {
+    margin-left: 15px;
 }
 
 #downBtn {
-    float: right;
+    float: left;
+    border: 1px solid green;
     width: 10%;
     position: -webkit-sticky;
     position: sticky;
@@ -128,8 +135,10 @@ input.done {
 
 #acrossBtn {
     float: left;
+    border: 1px solid green;
     width: 10%;
     position: -webkit-sticky;
     position: sticky;
     top: 10px;
 }
+
