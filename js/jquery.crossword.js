@@ -433,6 +433,18 @@ $(document).ready(function(){
 				},
 				
 				// to show the solution of currently selected/ active clue
+				/* Logic:
+					a) derive answer and current entry's orientation in ans, currOrientation resp.
+					b) use the same logic already used in showSolution function, which makes use of
+					   generator function SplitIndicWord to split the word into grapheme characters/ letters (uses while loop)
+					c) then we determine the current entry's First Coordinate inside variable currentFirstCoord
+					d) for loop is iterated to the length of active entry
+					e) inside loop based on current orientation, x, y and new coordinates are derived into 
+						x2Coord, y2Coord and newCoord variables resp.
+					f) value from the current element of splittedWord3 is populated into the data-coord attribute of the
+						active position
+
+				*/
 				getCurrentSoln: function() {
 					
 					let ans = puzz.data[activePosition].answer.toLowerCase();
