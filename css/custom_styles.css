@@ -142,3 +142,32 @@ input.done {
     top: 10px;
 }
 
+/* #showFullSoln,#showCurrentSoln, #lockButton, #unLockButton, #downBtn, #acrossBtn  */
+
+/* Applying the common properties to all buttons -- Begins here  */
+
+button
+{
+    
+    box-shadow: 8px 10px 10px 1px rgba(0,0,0,0.5);
+    border-radius: 25px;
+}
+
+button:hover {background-color: #3e8e41}
+
+button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+/* Applying the common properties to all buttons -- Ends here  */
+
+#lockButton, #unLockButton, #downBtn {
+    float: left;
+    border: 1px solid green;
+  }
+
+  #showFullSoln,#showCurrentSoln {
+    display: block;
+  }

@@ -20,15 +20,20 @@
 	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="css/custom_styles.css">
+
+
 </head>
 
 <body>
-	<button onclick="rotate(this)" id="lockButton" class="w3-btn w3-blue w3-margin-right">
+	
+	<button onclick="rotate(this)" id="lockButton" title= "Useful on mobile" class="w3-btn w3-blue  w3-margin-right">
 		Lock
 	</button>
-	<button onclick="screen.orientation.unlock()" id="unLockButton" class="w3-btn w3-blue w3-margin-right">
+	<button onclick="screen.orientation.unlock()" id="unLockButton" class="w3-btn w3-blue">
 		Unlock
 	</button>
+
+
 
 	<div class="w3-container">
 	  
@@ -52,7 +57,7 @@
 		  <div class="w3-dropdown-hover">
 				<button class="w3-button">Indian Languages</button>
 				<div class="w3-dropdown-content w3-bar-block w3-card-4">
-					<select id="langPuzzList" onChange="setData2(this.value);">
+					<select id="langPuzzList" size="13" onChange="setData2(this.value);">
 						<optgroup label="">
 							<option value="-">Select Crossword</option>
 						</optgroup>
@@ -80,12 +85,12 @@
 		  <div class="w3-dropdown-hover">
 			  <button class="w3-button w3-black">Hindi Songs</button>
 				<div class="w3-dropdown-content w3-bar-block w3-card-4">
-					<select id="puzzList" onChange="setData2(this.value);">
+					<select id="puzzList" size="13" onChange="setData2(this.value);">
 						<optgroup label="">
 							<option value="-">Select Crossword</option>
 						</optgroup>
-						<optgroup label="Hindi Movie Song Lyrics">
-							<optgroup label="  गाने से मूवी को पहचानें">
+						<optgroup label="Hindi मूव्ही/ Movie Song Lyrics">
+							<optgroup label="  गाने से मूव्ही/ Movie को पहचानें">
 								<option value="hms91">Puzzle-1</option>
 								<option value="hms92">Puzzle-2</option>
 								<option value="hms93">Puzzle-3</option>
@@ -173,21 +178,24 @@
 				</div>
 		  </div>
 
-		  <!-- for Shared by  -->
+		  <!-- for Yearwise puzzles  -->
 		  <div class="w3-dropdown-hover">
-			<button class="w3-button">Shared by</button>
-			<div class="w3-dropdown-content w3-bar-block w3-card-4">
-				<select id="sharedPuzzList" onChange="setData2(this.value);">
+			<button class="w3-button">Yearwise Hindi Songs</button>
+			<div class="w3-dropdown-content w3-bar-block w3-border">
+				<select id="yearWisePuzzList" size="13" onChange="setData2(this.value);">
 					<optgroup label="">
 						<option value="-">Select Crossword</option>
 					</optgroup>
-					<optgroup label="Shared by Public">
-							<option class="w3-bar-item w3-button"  value="sbp001">Mr. XYZ</option>
-							
-						</optgroup>
-					<optgroup label="Shared by Writers">
-							<option class="w3-bar-item w3-button" value="sbw001">Mr. ABC</option>
-							
+					<optgroup label="Identify second line/ दुसरी लाइन को पहचानें">
+						<option value="year001">Year 2010-2021 -- 1</option>
+						<option value="year002">Year 2010-2021 -- 2</option>
+						<option value="year003">Year 2010-2021 -- 3</option>
+						<option value="year004">Year 2000-2009 -- 1</option>
+						<option value="year005">Year 2000-2009 -- 2</option>
+						<option value="year006">Year 2000-2009 -- 3</option>
+						<option value="year007">Year 1990-1999 -- 1</option>
+						<option value="year008">Year 1990-1999 -- 2</option>
+						<option value="year009">Year 1990-1999 -- 3</option>
 					</optgroup>
 				</select>	
 		    </div>
@@ -246,6 +254,16 @@
 			</div>
 		</div>
 
+		<!-- for Puzzles Shared by People -->
+		<div class="w3-dropdown-hover">
+			<button class="w3-button w3-black">Shared By People</button>
+			<div class="w3-dropdown-content w3-bar-block w3-border">
+				<a href="#" id='sbp001' class="w3-bar-item w3-button" onClick="setData2(this.id); return false;">Shared By-1</a>
+				<a href="#" id='sbp002' class="w3-bar-item w3-button" onClick="setData2(this.id); return false;">Shared By-2</a>
+				<a href="#" id='sbp003' class="w3-bar-item w3-button" onClick="setData2(this.id); return false;">Shared By-3</a>
+				<a href="#" id='sbp004' class="w3-bar-item w3-button" onClick="setData2(this.id); return false;">Shared By-4</a>
+			</div>
+		</div>
 
 	</div>
 	</div>

@@ -40,8 +40,9 @@ $(document).ready(function(){
 			this.after('<div class="w3-container">');
 			this.after('<div id="puzzle-clues"><h4>Across</h4><ul id="across" class="w3-container w3-hide"></ul><h4>Down</h4><ul id="down" class="w3-container w3-hide"></ul></div>');
 			this.after('<button id="downBtn"   onclick="showAccordian(\'down\')"    class="w3-btn w3-grey  w3-left-align" style="width:10%">Open Down</button>');
-			this.after('<button id="acrossBtn" onclick="showAccordian(\'across\')"  class="w3-btn w3-black w3-left-align style="width:10%">Open Across</button>');
+			this.after('<button id="acrossBtn" onclick="showAccordian(\'across\')"  class="w3-btn w3-black w3-left-align w3-margin-right" style="width:10%">Open Across</button>');
 			this.after('</div>'); //  class="w3-container"
+			
 			// initialize some variables
 			var tbl = ['<table id="puzzle">'],
 			    puzzEl = this,
@@ -92,6 +93,7 @@ $(document).ready(function(){
 							default:
 								break;
 						}
+
 						// if 9: tab key is pressed, 
 						if ( e.keyCode === 9) {
 							return false;
@@ -109,13 +111,21 @@ $(document).ready(function(){
 								currOri === 'across' ? nav.nextPrevNav(e, 37) : nav.nextPrevNav(e, 38); 
 							} else {
 								// VR: added as per bug#18 fix by Kiki-L
-								return true;  
+								//c return true;  
 								nav.nextPrevNav(e);
 							}
-							
+
 							e.preventDefault();
 							return false;
-						} else {
+						} 
+						// VR added: to move to next cell when either Spacebar, Enter key press or  upon five characters
+						else if(e.keyCode === 32 || e.keyCode === 13) /*|| e.target.value.length === 5)*/
+						// if(e.which === 32 || e.which === 13) /*|| e.target.value.length === 5)*/
+						{
+							currOri === 'across' ? nav.nextPrevNav(e, 39) : nav.nextPrevNav(e, 40);
+						}
+						
+						else {
 							
 							// console.log('input keyup: '+solvedToggle);
 							
@@ -131,58 +141,14 @@ $(document).ready(function(){
 					puzzEl.delegate('input', 'paste', function(e){
 						mode = 'interacting';
 						// $("[data-coords='" + newCoord + "'].position-" + i + " input").val(splittedWord[j]);
-						$("[data-coords='1,1'].position-0 input").text('स');
-						// alert('value pasted is: ' + currVal );
-						/*
-						// need to figure out orientation up front, before we attempt to highlight an entry
-						// 37:	left arrow, 38:	up arrow 39:	right arrow, 40:	down arrow
-						switch(e.which) {
-							case 39:
-							case 37:
-								currOri = 'across';
-								break;
-							case 38:
-							case 40:
-								currOri = 'down';
-								break;
-							default:
-								break;
-						}
-						// if 9: tab key is pressed, 
-						if ( e.keyCode === 9) {
-							return false;
-						} else if (
-							e.keyCode === 37 ||
-							e.keyCode === 38 ||
-							e.keyCode === 39 ||
-							e.keyCode === 40 ||
-							e.keyCode === 8 ||
-							e.keyCode === 46 ) {			
-												
-
-							// 46: delete, 8: backspace. VR commented: for delete
-							if (e.keyCode === 8 || e.keyCode === 46) // slashstar && !e.target.value) starslash 
-							{
-								currOri === 'across' ? nav.nextPrevNav(e, 37) : nav.nextPrevNav(e, 38); 
-							} else {
-								// VR: added as per bug#18 fix by Kiki-L
-								return true;  
-								nav.nextPrevNav(e);
-							}
-							
-							e.preventDefault();
-							return false;
-						} else {
-							
-							// console.log('input keyup: '+solvedToggle);
-							
-							puzInit.checkAnswer(e);
-
-						}
-						
+						// $("[data-coords='1,1'].position-0 input").val('स');
+						// access the clipboard using the api
+						var pastedData = e.originalEvent.clipboardData.getData('text/plain').trim() ;
+						// To override the default behavior cancelling the default action
 						e.preventDefault();
-						return false;	
-						*/				
+						puzInit.getCurrentSoln(pastedData);
+    					// alert(pastedData);
+
 					});
 			
 					// tab navigation handler setup
@@ -445,9 +411,11 @@ $(document).ready(function(){
 						active position
 
 				*/
-				getCurrentSoln: function() {
+				getCurrentSoln: function(pastedValue) {
 					
-					let ans = puzz.data[activePosition].answer.toLowerCase();
+					let ans = pastedValue ? 
+						pastedValue
+						: puzz.data[activePosition].answer.toLowerCase();
 					let currOrientation = puzz.data[activePosition].orientation;
 
 					let splittedWord3 = [];
@@ -481,6 +449,11 @@ $(document).ready(function(){
 						$("[data-coords='" + newCoord + "'].position-" + activePosition + " input").val(splittedWord3[j]);
 						
 					}
+					// when value is pastedcopy first letter in the first cell
+					// if (pastedValue) {
+					// 	$("[data-coords='" + currentFirstCoord + "'].position-" + activePosition + " input").val('.');
+					// }
+
 					
 				},
 				/*

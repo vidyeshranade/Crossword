@@ -62,15 +62,15 @@
    },
      "hms91": {
     "src": "script_dc_song2movie_26_March_2021_1225.js",									
-    "note2":  "<b>Note: </b>आपको गाने की FIRST लाइन  से Movie को पहचानें."
+    "note2":  "<b>Note: </b>आपको गाने की FIRST लाइन  से मूव्ही/ Movie को पहचानें."
     },
      "hms92": {
         "src": "script_dc_song2movie_26_March_2021_1228.js",									
-        "note2":  "<b>Note: </b>आपको गाने की FIRST लाइन  से Movie को पहचानें."
+        "note2":  "<b>Note: </b>आपको गाने की FIRST लाइन  से मूव्ही/ Movie को पहचानें."
    },
      "hms93": {
         "src": "script_dc_song2movie_26_March_2021_1229.js",									
-        "note2":  "<b>Note: </b>आपको गाने की FIRST लाइन  से Movie को पहचानें."
+        "note2":  "<b>Note: </b>आपको गाने की FIRST लाइन  से मूव्ही/ Movie को पहचानें."
    },
      "hms101": {
         "src": "script_dc_आनंदबक्षी_16_March_2021_2107.js",									
@@ -102,75 +102,111 @@
    },
     "hms121": {
       "src": "script_dc_मजरूह_29_June_2021_2014.js",	
-      "note2":  "<b>Note: </b>फर्स्ट लाइन और नकाबपोश/ Masked लाइन 2 के खिलाफ जवाब के रूप में लाइन 2 को पहचानें."
+      "note2":  "<b>Note: </b>Identify Line2/ लाइन 2 को पहचानें."
    },
     "hms122": {
       "src": "script_dc_मजरूह_29_June_2021_2016.js",	
-      "note2":  "<b>Note: </b>फर्स्ट लाइन और नकाबपोश/ Masked लाइन 2 के खिलाफ जवाब के रूप में लाइन 2 को पहचानें."
+      "note2":  "<b>Note: </b>Identify Line2/ लाइन 2 को पहचानें."
    },
     "hms123": {
       "src": "script_dc_मजरूह_29_June_2021_2023.js",	
-      "note2":  "<b>Note: </b>फर्स्ट लाइन और नकाबपोश/ Masked लाइन 2 के खिलाफ जवाब के रूप में लाइन 2 को पहचानें."
+      "note2":  "<b>Note: </b>Identify Line2/ लाइन 2 को पहचानें."
    },
     "hms124": {
       "src": "script_dc_मजरूह_29_June_2021_2026.js",	
-      "note2":  "<b>Note: </b>फर्स्ट लाइन और नकाबपोश/ Masked लाइन 2 के खिलाफ जवाब के रूप में लाइन 2 को पहचानें."
+      "note2":  "<b>Note: </b>Identify Line2/ लाइन 2 को पहचानें."
    },
     "hms125": {
       "src": "script_dc_मजरूह_29_June_2021_2027.js",	
-      "note2":  "<b>Note: </b>फर्स्ट लाइन और नकाबपोश/ Masked लाइन 2 के खिलाफ जवाब के रूप में लाइन 2 को पहचानें."
+      "note2":  "<b>Note: </b>Identify Line2/ लाइन 2 को पहचानें."
    },
     "hms161": {
       "src": "script_dc_शैलेन्द्र_30_June_2021_1252.js",	
-      "note2":  "<b>Note: </b>फर्स्ट लाइन और नकाबपोश/ Masked लाइन 2 के खिलाफ जवाब के रूप में लाइन 2 को पहचानें."
+      "note2":  "<b>Note: </b>Identify Line2/ लाइन 2 को पहचानें."
    },
     "hms162": {
       "src": "script_dc_शैलेन्द्र_30_June_2021_1254.js",	
-      "note2":  "<b>Note: </b>फर्स्ट लाइन और नकाबपोश/ Masked लाइन 2 के खिलाफ जवाब के रूप में लाइन 2 को पहचानें."
+      "note2":  "<b>Note: </b>Identify Line2/ लाइन 2 को पहचानें."
    },
     "hms163": {
       "src": "script_dc_शैलेन्द्र_30_June_2021_1259.js",	
-      "note2":  "<b>Note: </b>फर्स्ट लाइन और नकाबपोश/ Masked लाइन 2 के खिलाफ जवाब के रूप में लाइन 2 को पहचानें."
+      "note2":  "<b>Note: </b>Identify Line2/ लाइन 2 को पहचानें."
    },
     "hms164": {
       "src": "script_dc_शैलेन्द्र_30_June_2021_1306.js",	
-      "note2":  "<b>Note: </b>फर्स्ट लाइन और नकाबपोश/ Masked लाइन 2 के खिलाफ जवाब के रूप में लाइन 2 को पहचानें."
+      "note2":  "<b>Note: </b>Identify Line2/ लाइन 2 को पहचानें."
    },
     "hms165": {
       "src": "script_dc_शैलेन्द्र_30_June_2021_1312.js",	
-      "note2":  "<b>Note: </b>फर्स्ट लाइन और नकाबपोश/ Masked लाइन 2 के खिलाफ जवाब के रूप में लाइन 2 को पहचानें."
+      "note2":  "<b>Note: </b>Identify Line2/ लाइन 2 को पहचानें."
    },
     "hms181": {
       "src": "script_dc_हसरत_30_June_2021_1327.js",	
-      "note2":  "<b>Note: </b>फर्स्ट लाइन और नकाबपोश/ Masked लाइन 2 के खिलाफ जवाब के रूप में लाइन 2 को पहचानें."
+      "note2":  "<b>Note: </b>Identify Line2/ लाइन 2 को पहचानें."
    },
     "hms182": {
       "src": "script_dc_हसरत_30_June_2021_1329.js",	
-      "note2":  "<b>Note: </b>फर्स्ट लाइन और नकाबपोश/ Masked लाइन 2 के खिलाफ जवाब के रूप में लाइन 2 को पहचानें."
+      "note2":  "<b>Note: </b>Identify Line2/ लाइन 2 को पहचानें."
    },
     "hms183": {
       "src": "script_dc_हसरत_30_June_2021_1331.js",	
-      "note2":  "<b>Note: </b>फर्स्ट लाइन और नकाबपोश/ Masked लाइन 2 के खिलाफ जवाब के रूप में लाइन 2 को पहचानें."
+      "note2":  "<b>Note: </b>Identify Line2/ लाइन 2 को पहचानें."
    },
     "hms184": {
       "src": "script_dc_हसरत_30_June_2021_1337.js",	
-      "note2":  "<b>Note: </b>फर्स्ट लाइन और नकाबपोश/ Masked लाइन 2 के खिलाफ जवाब के रूप में लाइन 2 को पहचानें."
+      "note2":  "<b>Note: </b>Identify Line2/ लाइन 2 को पहचानें."
    },
     "hms185": {
       "src": "script_dc_हसरत_30_June_2021_1339.js",	
-      "note2":  "<b>Note: </b>फर्स्ट लाइन और नकाबपोश/ Masked लाइन 2 के खिलाफ जवाब के रूप में लाइन 2 को पहचानें."
+      "note2":  "<b>Note: </b>Identify Line2/ लाइन 2 को पहचानें."
    },
     "hms201": {
         "src": "script_dc_Gulzar_and_Yogesh_26_March_2021_1243.js",	
-        "note2":  "<b>Note: </b>फर्स्ट लाइन और नकाबपोश/ Masked लाइन 2 के खिलाफ जवाब के रूप में लाइन 2 को पहचानें."
+        "note2":  "<b>Note: </b>Identify Line2/ लाइन 2 को पहचानें."
    },
      "hms202": {
         "src": "script_dc_Gulzar_and_Yogesh_26_March_2021_1247.js",	
-        "note2":  "<b>Note: </b>फर्स्ट लाइन और नकाबपोश/ Masked लाइन 2 के खिलाफ जवाब के रूप में लाइन 2 को पहचानें."
+        "note2":  "<b>Note: </b>Identify Line2/ लाइन 2 को पहचानें."
    },
      "hms203": {
         "src": "script_dc_Gulzar_and_Yogesh_26_March_2021_1249.js",	
-        "note2":  "<b>Note: </b>फर्स्ट लाइन और नकाबपोश/ Masked लाइन 2 के खिलाफ जवाब के रूप में लाइन 2 को पहचानें."
+        "note2":  "<b>Note: </b>Identify Line2/ लाइन 2 को पहचानें."
+   },
+     "year001": {
+        "src": "script_dc_2010_to_2021_30_June_2021_1603.js",	
+        "note2":  "<b>Note: </b>Identify Line2/ लाइन 2 को पहचानें."
+   },
+     "year002": {
+        "src": "script_dc_2010_to_2021_30_June_2021_1645.js",	
+        "note2":  "<b>Note: </b>Identify Line2/ लाइन 2 को पहचानें."
+   },
+     "year003": {
+        "src": "script_dc_2010_to_2021_30_June_2021_1648.js",	
+        "note2":  "<b>Note: </b>Identify Line2/ लाइन 2 को पहचानें."
+   },
+     "year004": {
+        "src": "script_dc_2000_to_2009_30_June_2021_1651.js",	
+        "note2":  "<b>Note: </b>Identify Line2/ लाइन 2 को पहचानें."
+   },
+     "year005": {
+        "src": "script_dc_2000_to_2009_30_June_2021_1651.js",	
+        "note2":  "<b>Note: </b>Identify Line2/ लाइन 2 को पहचानें."
+   },
+     "year006": {
+        "src": "script_dc_2000_to_2009_30_June_2021_1656.js",	
+        "note2":  "<b>Note: </b>Identify Line2/ लाइन 2 को पहचानें."
+   },
+     "year007": {
+        "src": "script_dc_1990_to_1999_30_June_2021_1714.js",	
+        "note2":  "<b>Note: </b>Identify Line2/ लाइन 2 को पहचानें."
+   },
+     "year008": {
+        "src": "script_dc_1990_to_1999_30_June_2021_1715.js",	
+        "note2":  "<b>Note: </b>Identify Line2/ लाइन 2 को पहचानें."
+   },
+     "year009": {
+        "src": "script_dc_1990_to_1999_30_June_2021_1717.js",	
+        "note2":  "<b>Note: </b>Identify Line2/ लाइन 2 को पहचानें."
    },
      "sp001": {
         "src": "script_dc_science_25_March_2021_1931.js",	
@@ -292,3 +328,4 @@ function countDownTimer() {
 
 }
 
+  
