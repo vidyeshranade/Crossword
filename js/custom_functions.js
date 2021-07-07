@@ -328,4 +328,10 @@ function countDownTimer() {
 
 }
 
+// to remove space before, in between and after 
+// to remove comma
+function myTrim(x) {
+  return x.replace(/\s+|\s+|,+/gm,'');
+}
+
   

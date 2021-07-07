@@ -23,10 +23,16 @@ https://github.com/vidyeshranade/Crossword.git
 						song line, movie name etc.
 	- Buttons for:
 		- Clues: Function as accordian (Open/ Close)
-		- Show First/ Last Letter or Full Solution
+		- Show First/ Last Letter of current answer
+		- Show First/ Last Letter of All answers
+		- Show current answer
+		- Show all answers
 		- Top: to move to Top of the page
+		- Bottom: to move to Bottom of the page
 		
 	- Spacebar/ Enter Key to move to next cell during input of answer
+	- Answer pasting is possible
+	- You may use Google Voice Typing for leanthy answers (above 10 letters)
 	- Allows to enter multi-byte Indian Language Script Character in single cell
 	- Supports proper split of words into letters/ clusters and counts the length
 	- Split the word: Utility to use while build your own puzzle
@@ -35,7 +41,7 @@ https://github.com/vidyeshranade/Crossword.git
 ## Contributing
 I amd looking for a feature to add.
 Which should enable end user to hook the puzzle into the application.
-Past answer into puzzle instead of typing each letter
+Past answer into puzzle instead of typing each letter >> Done
 
 ## Credits
 The real magic of puzzle rendering is from the baseline (awesome) code by Jesse Weisbeck.
@@ -46,6 +52,9 @@ https://www.babelstone.co.uk/Unicode/unicode.html
 
 HTML/ CSS/ JS Help, templates taken from the tutorials, examples:
 https://www.w3schools.com/
+
+Hindi Songs Taken from
+https://geetmanjusha.com/
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)

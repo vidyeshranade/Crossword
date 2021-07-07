@@ -86,7 +86,7 @@ input.done {
     line-height: 1.6em;
 }
 
-#myBtn {
+#myTopBtn {
     display: none;
     position: fixed;
     bottom: 20px;
@@ -102,9 +102,10 @@ input.done {
     border-radius: 4px;
 }
 
-#myBtn:hover {
+#myTopBtn:hover {
     background-color: #555;
 }
+
 
 /* #to-top {
     position: fixed;
@@ -150,7 +151,8 @@ button
 {
     
     box-shadow: 8px 10px 10px 1px rgba(0,0,0,0.5);
-    border-radius: 25px;
+    /* use for rounded button */
+    /* border-radius: 25px; */  
 }
 
 button:hover {background-color: #3e8e41}
@@ -168,6 +170,14 @@ button:active {
     border: 1px solid green;
   }
 
-  #showFullSoln,#showCurrentSoln {
+  /* #showFullSoln,#showCurrentSoln {
+    display: block;
+  }
+
+  #showSolnLastLetter,#showSolnFirstLetter {
+    display: block;
+  } */
+
+  #downBtn,#acrossBtn {
     display: block;
   }

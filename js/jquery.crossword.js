@@ -30,17 +30,23 @@ $(document).ready(function(){
 			this.after('<div class="w3-container">');
 			// this.after('<button id="uniqueSolved" class="w3-btn w3-blue  w3-left-align" style="width:15%">Is Solved?</button>');
 			this.after('<button id="showFullSoln"  class="w3-btn w3-green w3-margin-right" style="width:15%">All Answers</button>');
-			this.after('<button id="showSolnLastLetter"  class="w3-btn w3-blue w3-margin-right" style="width:15%">All Last Letter</button>');
-			this.after('<button id="showSolnFirstLetter" class="w3-btn w3-blue  w3-margin-right" style="width:15%">All First Letter</button>');
-			this.after('<button id="showSolnLastLetterCurrent" class="w3-btn w3-lime  w3-margin-right" style="width:15%">Current Last Letter</button>');
-			this.after('<button id="showSolnFirstLetterCurrent" class="w3-btn w3-lime  w3-margin-right" style="width:15%">Current First Letter</button>');
 			this.after('<button id="showCurrentSoln"  class="w3-btn w3-amber w3-margin-right" style="width:15%">Current Answer</button>');
 			this.after('</div>'); //  class="w3-container"
 
 			this.after('<div class="w3-container">');
-			this.after('<div id="puzzle-clues"><h4>Across</h4><ul id="across" class="w3-container w3-hide"></ul><h4>Down</h4><ul id="down" class="w3-container w3-hide"></ul></div>');
-			this.after('<button id="downBtn"   onclick="showAccordian(\'down\')"    class="w3-btn w3-grey  w3-left-align" style="width:10%">Open Down</button>');
-			this.after('<button id="acrossBtn" onclick="showAccordian(\'across\')"  class="w3-btn w3-black w3-left-align w3-margin-right" style="width:10%">Open Across</button>');
+			this.after('<button id="showSolnLastLetter"  class="w3-btn w3-blue w3-margin-right" style="width:15%">All Last Letter</button>');
+			this.after('<button id="showSolnFirstLetter" class="w3-btn w3-blue  w3-margin-right" style="width:15%">All First Letter</button>');
+			this.after('</div>'); //  class="w3-container"
+
+			this.after('<div class="w3-container">');
+			this.after('<button id="showSolnLastLetterCurrent" class="w3-btn w3-lime  w3-margin-right">Current Last Letter</button>');
+			this.after('<button id="showSolnFirstLetterCurrent" class="w3-btn w3-lime  w3-margin-right">Current First Letter</button>');
+			this.after('</div>'); //  class="w3-container"
+
+			this.after('<div class="w3-container">');
+			this.after('<div id="puzzle-clues"><h4>Across(&rarr;)</h4><ul id="across" class="w3-container w3-hide"></ul><h4>Down(&darr;)</h4><ul id="down" class="w3-container w3-hide"></ul></div>');
+			this.after('<button id="downBtn"   onclick="showAccordian(\'down\')"    class="w3-btn w3-grey  w3-left-align">Open Down</button>');
+			this.after('<button id="acrossBtn" onclick="showAccordian(\'across\')"  class="w3-btn w3-black">Open Across</button>');
 			this.after('</div>'); //  class="w3-container"
 			
 			// initialize some variables
@@ -143,12 +149,18 @@ $(document).ready(function(){
 						// $("[data-coords='" + newCoord + "'].position-" + i + " input").val(splittedWord[j]);
 						// $("[data-coords='1,1'].position-0 input").val('स');
 						// access the clipboard using the api
-						var pastedData = e.originalEvent.clipboardData.getData('text/plain').trim() ;
+						var pastedData = e.originalEvent.clipboardData.getData('text/plain') ;
 						// To override the default behavior cancelling the default action
 						e.preventDefault();
-						puzInit.getCurrentSoln(pastedData);
+						puzInit.getCurrentSoln(myTrim(pastedData));
     					// alert(pastedData);
-
+						// to move to current cell
+						// $('.active').eq(0).focus();
+						// $('.active').eq(0).select();
+						// nav.updateByNav(e);
+						// $(e.target).focus();
+						// $(e.target).select();				
+						
 					});
 			
 					// tab navigation handler setup
@@ -492,7 +504,8 @@ $(document).ready(function(){
 						solvedToggle = true;
 
 						// update the score
-						$("#yourScore").text("Your Score is: " + solved.length + " / " + puzz.data.length).css("color", "green", "font-weight", "bold")
+						// $("#yourScore").text("Your Score is: " + solved.length + " / " + puzz.data.length).css("color", "green", "font-weight", "bold")
+						$("#yourScore").text("Your Score is: " +  'clue-done'.length + " / " + puzz.data.length).css("color", "green", "font-weight", "bold")
 						return;
 					}
 					

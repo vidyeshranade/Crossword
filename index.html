@@ -32,6 +32,9 @@
 	<button onclick="screen.orientation.unlock()" id="unLockButton" class="w3-btn w3-blue">
 		Unlock
 	</button>
+	<button onclick="scrollToBottom()" id="myBottomBtn1" title= "Goto Bottom" class="w3-btn w3-blue w3-right">
+		Bottom
+	</button>
 
 
 
@@ -278,7 +281,7 @@
 	<script>
 		w3.slideshow(".moviePosters", 1500);
 	</script> -->
-	<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+	<button onclick="topFunction()" id="myTopBtn" title="Go to top">Top</button>
 
 	<!-- <div id="to-top" title="back to top">↑</div> -->
 
@@ -298,11 +301,11 @@
 
 <script>	
 	//Get the button
-	var mybutton = document.getElementById("myBtn");
+	var mybutton = document.getElementById("myTopBtn");
 
 	// When the user scrolls down 20px from the top of the document, show the button
 	window.onscroll = function() {scrollFunction()};
-
+	
 	function scrollFunction() {
 		if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
 			mybutton.style.display = "block";
@@ -317,6 +320,13 @@
 		document.body.scrollTop = 0;
 		document.documentElement.scrollTop = 0;
 	}
+
+	// to go to bottom of the page
+	function scrollToBottom () {
+		window.scrollTo(0,document.body.scrollHeight);
+
+}
+
 
 	// Code for Lock, Unlock and change orientation
 	// Taken from: https://w3c.github.io/screen-orientation/#locking-to-a-specific-orientation-and-unlocking
