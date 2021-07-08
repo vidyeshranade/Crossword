@@ -32,9 +32,9 @@
 	<button onclick="screen.orientation.unlock()" id="unLockButton" class="w3-btn w3-blue">
 		Unlock
 	</button>
-	<button onclick="scrollToBottom()" id="myBottomBtn1" title= "Goto Bottom" class="w3-btn w3-blue w3-right">
+	<!-- <button onclick="scrollToBottom()" id="myBottomBtn1" title= "Goto Bottom" class="w3-btn w3-blue w3-right">
 		Bottom
-	</button>
+	</button> -->
 
 
 
@@ -282,6 +282,7 @@
 		w3.slideshow(".moviePosters", 1500);
 	</script> -->
 	<button onclick="topFunction()" id="myTopBtn" title="Go to top">Top</button>
+	<button onclick="scrollToBottom()" id="myBottomBtn" title="Go to Bottom">Bottom</button>
 
 	<!-- <div id="to-top" title="back to top">↑</div> -->
 
@@ -301,16 +302,19 @@
 
 <script>	
 	//Get the button
-	var mybutton = document.getElementById("myTopBtn");
+	var mybuttonTop = document.getElementById("myTopBtn");
+	var mybuttonBottom = document.getElementById("myBottomBtn");
 
 	// When the user scrolls down 20px from the top of the document, show the button
 	window.onscroll = function() {scrollFunction()};
 	
 	function scrollFunction() {
 		if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-			mybutton.style.display = "block";
+			mybuttonTop.style.display = "block";
+			mybuttonBottom.style.display = "block";
 		} else {
-			mybutton.style.display = "none";
+			mybuttonTop.style.display = "none";
+			mybuttonBottom.style.display = "none";
 			
 		}
 	}

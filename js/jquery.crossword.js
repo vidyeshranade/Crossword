@@ -30,7 +30,7 @@ $(document).ready(function(){
 			this.after('<div class="w3-container">');
 			// this.after('<button id="uniqueSolved" class="w3-btn w3-blue  w3-left-align" style="width:15%">Is Solved?</button>');
 			this.after('<button id="showFullSoln"  class="w3-btn w3-green w3-margin-right" style="width:15%">All Answers</button>');
-			this.after('<button id="showCurrentSoln"  class="w3-btn w3-amber w3-margin-right" style="width:15%">Current Answer</button>');
+			this.after('<button id="showCurrentSoln"  class="w3-btn w3-green w3-margin-right" style="width:15%">Current Answer</button>');
 			this.after('</div>'); //  class="w3-container"
 
 			this.after('<div class="w3-container">');
@@ -39,8 +39,8 @@ $(document).ready(function(){
 			this.after('</div>'); //  class="w3-container"
 
 			this.after('<div class="w3-container">');
-			this.after('<button id="showSolnLastLetterCurrent" class="w3-btn w3-lime  w3-margin-right">Current Last Letter</button>');
-			this.after('<button id="showSolnFirstLetterCurrent" class="w3-btn w3-lime  w3-margin-right">Current First Letter</button>');
+			this.after('<button id="showSolnLastLetterCurrent" class="w3-btn w3-lime  w3-margin-right" style="width:15%">Current Last Letter</button>');
+			this.after('<button id="showSolnFirstLetterCurrent" class="w3-btn w3-lime  w3-margin-right" style="width:15%">Current First Letter</button>');
 			this.after('</div>'); //  class="w3-container"
 
 			this.after('<div class="w3-container">');
@@ -154,12 +154,6 @@ $(document).ready(function(){
 						e.preventDefault();
 						puzInit.getCurrentSoln(myTrim(pastedData));
     					// alert(pastedData);
-						// to move to current cell
-						// $('.active').eq(0).focus();
-						// $('.active').eq(0).select();
-						// nav.updateByNav(e);
-						// $(e.target).focus();
-						// $(e.target).select();				
 						
 					});
 			
@@ -461,12 +455,10 @@ $(document).ready(function(){
 						$("[data-coords='" + newCoord + "'].position-" + activePosition + " input").val(splittedWord3[j]);
 						
 					}
-					// when value is pastedcopy first letter in the first cell
-					// if (pastedValue) {
-					// 	$("[data-coords='" + currentFirstCoord + "'].position-" + activePosition + " input").val('.');
-					// }
-
 					
+					// to move to current cell
+					$('.active').eq(0).focus();						
+										
 				},
 				/*
 					- Checks current entry input group value against answer
@@ -505,7 +497,7 @@ $(document).ready(function(){
 
 						// update the score
 						// $("#yourScore").text("Your Score is: " + solved.length + " / " + puzz.data.length).css("color", "green", "font-weight", "bold")
-						$("#yourScore").text("Your Score is: " +  'clue-done'.length + " / " + puzz.data.length).css("color", "green", "font-weight", "bold")
+						$("#yourScore").text("Your Score is: " +  $('.clue-done').length + " / " + puzz.data.length).css("color", "green", "font-weight", "bold")
 						return;
 					}
 					
@@ -862,7 +854,13 @@ $(document).ready(function(){
 								}
 							}
 						}
-						topFunction();
+						// topFunction();
+						// to move to current cell last or first cell
+						if (myChoice == 'LAST_CURRENT') {
+							$('.active').eq($actives.length-1).focus();	
+						} else {
+							$('.active').eq(0).focus();	
+						}
 		
 			}
 			
