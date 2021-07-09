@@ -75,8 +75,8 @@ input.done {
 #puzzle-clues {
     float: left;
     width: 20%;
-    position: -webkit-sticky;
-    position: sticky;
+    /* position: -webkit-sticky;
+    position: sticky; */
     top: 30px;
 }
 
@@ -147,8 +147,8 @@ input.done {
     float: left;
     border: 1px solid green;
     width: 10%;
-    position: -webkit-sticky;
-    position: sticky;
+    /* position: -webkit-sticky;
+    position: sticky; */
     top: 10px;
 }
 
@@ -156,8 +156,8 @@ input.done {
     float: left;
     border: 1px solid green;
     width: 10%;
-    position: -webkit-sticky;
-    position: sticky;
+    /* position: -webkit-sticky;
+    position: sticky; */
     top: 10px;
 }
 

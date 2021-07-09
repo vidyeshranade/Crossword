@@ -154,7 +154,7 @@ $(document).ready(function(){
 						e.preventDefault();
 						puzInit.getCurrentSoln(myTrim(pastedData));
     					// alert(pastedData);
-						
+						puzInit.checkAnswer(e);
 					});
 			
 					// tab navigation handler setup

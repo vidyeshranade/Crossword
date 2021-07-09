@@ -6,7 +6,7 @@
     var obj1 = getData2(title);
     document.getElementById("loadPuzzFile").src = "puzzles/" + obj1.src;
     document.getElementById("note2").innerHTML = obj1.note2;
-    document.getElementById("note1").innerHTML = "F5: to reload | Spacebar or Enter Key: Moves to next cell | Tab: Moves to next clue"
+    document.getElementById("note1").innerHTML = "F5: to reload | Spacebar or Enter Key: Moves to next cell | Tab: Moves to next clue | ^v to paste answer"
     alert( "You time starts now...");
     // hide all elements with class = w3-dropdown-hover
     $('.w3-dropdown-hover').hide(); 
