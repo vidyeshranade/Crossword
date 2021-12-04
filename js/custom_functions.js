@@ -32,8 +32,12 @@
         "src": "script_dc_Bangla_by_Nitesh_Roy.js",
        "note2":  "<b>Note: </b>Identify Answers in বাংলা for English Clues"
    },
+     "ilnwH001": {
+        "src": "script_dc_Hindi_by_Mayur_Sarwate.js",
+       "note2":  "<b>Note: </b>Identify मध्यप्रदेश Districts in हिन्दी for English Clues"
+   },
      "ilnwP001": {
-        "src": "script_dc_Punjabi_by_Ramnish_Bedi.js",
+        "src": "script_dc_Punjabi_by_Ramanjeet_Saini.js",
         "note2":  "<b>Note: </b>Identify Answers in ਪੰਜਾਬੀ for English Clues"
    },
      "ilnwO001": {
@@ -59,6 +63,14 @@
      "ilseTA001": {
         "src": "script_dc_Tamil_by_Ramakrishnan_Sivaraman.js",
         "note2":  "<b>Note: </b>Identify Districts of Tamilnadu in தமிழ் for தமிழ்/ English Clues"
+   },
+     "ilseTA002": {
+        "src": "script_dc_RAJNI_MOVIES_03_December_2021_2348.js",
+        "note2":  "<b>Note: </b>Identify Rajnikant's Movie Name in Tamil for Tamil/ English Role Name as a Clues"
+   },
+     "ilseTA003": {
+        "src": "script_dc_RAJNI_MOVIES_04_December_2021_1201.js",
+        "note2":  "<b>Note: </b>Identify Rajnikant's Movie Name in Tamil for Tamil/ English Role Name as a Clues"
    },
      "hms91": {
     "src": "script_dc_song2movie_26_March_2021_1225.js",									
