@@ -7,220 +7,220 @@
 		// two entries: an across entry and a down entry
 		var puzzleData = [
 {
-         clue: 'ଅନୁଗୋଳ district is famous for …-[]',
-         answer: 'ଅନୁଗୋଳ',
-         attempt: '', 
-         position: 1,
-         orientation: '',
-         startx: ,
-         starty: 
+	 clue: "ବାଲେଶ୍ୱର district is famous for …-(5)",
+	 answer: "ବାଲେଶ୍ୱର",
+	 attempt: "", 
+	 position: 1,
+	 orientation: "down",
+	 startx: 4,
+	 starty: 28
 },
-	{
-         clue: 'କଟକ district is famous for …-[]',
-         answer: 'କଟକ',
-         attempt: '', 
-         position: 2,
-         orientation: '',
-         startx: ,
-         starty: 
+{
+	 clue: "ଝାରସୁଗୁଡ଼ା district is famous for …-(5)",
+	 answer: "ଝାରସୁଗୁଡ଼ା",
+	 attempt: "", 
+	 position: 2,
+	 orientation: "across",
+	 startx: 3,
+	 starty: 32
 },
-	{
-         clue: 'କଳାହାଣ୍ଡି district is famous for …-[]',
-         answer: 'କଳାହାଣ୍ଡି',
-         attempt: '', 
-         position: 3,
-         orientation: '',
-         startx: ,
-         starty: 
+{
+	 clue: "ନୂଆପଡ଼ା district is famous for …-(4)",
+	 answer: "ନୂଆପଡ଼ା",
+	 attempt: "", 
+	 position: 3,
+	 orientation: "down",
+	 startx: 7,
+	 starty: 29
 },
-	{
-         clue: 'କନ୍ଧମାଳ district is famous for …-[]',
-         answer: 'କନ୍ଧମାଳ',
-         attempt: '', 
-         position: 4,
-         orientation: '',
-         startx: ,
-         starty: 
+{
+	 clue: "ସୁବର୍ଣ୍ଣପୁର district is famous for …-(7)",
+	 answer: "ସୁବର୍ଣ୍ଣପୁର",
+	 attempt: "", 
+	 position: 4,
+	 orientation: "down",
+	 startx: 5,
+	 starty: 32
 },
-	{
-         clue: 'କେନ୍ଦୁଝର district is famous for …-[]',
-         answer: 'କେନ୍ଦୁଝର',
-         attempt: '', 
-         position: 5,
-         orientation: '',
-         startx: ,
-         starty: 
+{
+	 clue: "କଳାହାଣ୍ଡି district is famous for …-(5)",
+	 answer: "କଳାହାଣ୍ଡି",
+	 attempt: "", 
+	 position: 5,
+	 orientation: "across",
+	 startx: 2,
+	 starty: 35
 },
-	{
-         clue: 'କେନ୍ଦ୍ରାପଡ଼ା district is famous for …-[]',
-         answer: 'କେନ୍ଦ୍ରାପଡ଼ା',
-         attempt: '', 
-         position: 6,
-         orientation: '',
-         startx: ,
-         starty: 
+{
+	 clue: "କଟକ district is famous for …-(3)",
+	 answer: "କଟକ",
+	 attempt: "", 
+	 position: 5,
+	 orientation: "down",
+	 startx: 2,
+	 starty: 35
 },
-	{
-         clue: 'କୋରାପୁଟ district is famous for …-[]',
-         answer: 'କୋରାପୁଟ',
-         attempt: '', 
-         position: 7,
-         orientation: '',
-         startx: ,
-         starty: 
+{
+	 clue: "ଭଦ୍ରକ district is famous for …-(4)",
+	 answer: "ଭଦ୍ରକ",
+	 attempt: "", 
+	 position: 6,
+	 orientation: "across",
+	 startx: 3,
+	 starty: 38
 },
-	{
-         clue: 'ଖୋର୍ଦ୍ଧା district is famous for …-[]',
-         answer: 'ଖୋର୍ଦ୍ଧା',
-         attempt: '', 
-         position: 8,
-         orientation: '',
-         startx: ,
-         starty: 
+{
+	 clue: "ସମ୍ବଲପୁର district is famous for …-(6)",
+	 answer: "ସମ୍ବଲପୁର",
+	 attempt: "", 
+	 position: 7,
+	 orientation: "across",
+	 startx: 2,
+	 starty: 41
 },
-	{
-         clue: 'ଗଜପତି district is famous for …-[]',
-         answer: 'ଗଜପତି',
-         attempt: '', 
-         position: 9,
-         orientation: '',
-         startx: ,
-         starty: 
+{
+	 clue: "ନବରଙ୍ଗପୁର district is famous for …-(7)",
+	 answer: "ନବରଙ୍ଗପୁର",
+	 attempt: "", 
+	 position: 8,
+	 orientation: "down",
+	 startx: 4,
+	 starty: 40
 },
-	{
-         clue: 'ଗଞ୍ଜାମ district is famous for …-[]',
-         answer: 'ଗଞ୍ଜାମ',
-         attempt: '', 
-         position: 10,
-         orientation: '',
-         startx: ,
-         starty: 
+{
+	 clue: "କେନ୍ଦୁଝର district is famous for …-(5)",
+	 answer: "କେନ୍ଦୁଝର",
+	 attempt: "", 
+	 position: 9,
+	 orientation: "down",
+	 startx: 7,
+	 starty: 37
 },
-	{
-         clue: 'ଜଗତସିଂହପୁର district is famous for …-[]',
-         answer: 'ଜଗତସିଂହପୁର',
-         attempt: '', 
-         position: 11,
-         orientation: '',
-         startx: ,
-         starty: 
+{
+	 clue: "କନ୍ଧମାଳ district is famous for …-(5)",
+	 answer: "କନ୍ଧମାଳ",
+	 attempt: "", 
+	 position: 10,
+	 orientation: "across",
+	 startx: 6,
+	 starty: 38
 },
-	{
-         clue: 'ଝାରସୁଗୁଡ଼ା district is famous for …-[]',
-         answer: 'ଝାରସୁଗୁଡ଼ା',
-         attempt: '', 
-         position: 12,
-         orientation: '',
-         startx: ,
-         starty: 
+{
+	 clue: "ବଲାଙ୍ଗୀର district is famous for …-(5)",
+	 answer: "ବଲାଙ୍ଗୀର",
+	 attempt: "", 
+	 position: 11,
+	 orientation: "across",
+	 startx: 2,
+	 starty: 43
 },
-	{
-         clue: 'ଢେଙ୍କାନାଳ district is famous for …-[]',
-         answer: 'ଢେଙ୍କାନାଳ',
-         attempt: '', 
-         position: 13,
-         orientation: '',
-         startx: ,
-         starty: 
+{
+	 clue: "ଅନୁଗୋଳ district is famous for …-(4)",
+	 answer: "ଅନୁଗୋଳ",
+	 attempt: "", 
+	 position: 12,
+	 orientation: "down",
+	 startx: 10,
+	 starty: 35
 },
-	{
-         clue: 'ଦେବଗଡ଼ district is famous for …-[]',
-         answer: 'ଦେବଗଡ଼',
-         attempt: '', 
-         position: 14,
-         orientation: '',
-         startx: ,
-         starty: 
+{
+	 clue: "କେନ୍ଦ୍ରାପଡ଼ା district is famous for …-(6)",
+	 answer: "କେନ୍ଦ୍ରାପଡ଼ା",
+	 attempt: "", 
+	 position: 13,
+	 orientation: "down",
+	 startx: 2,
+	 starty: 45
 },
-	{
-         clue: 'ନବରଙ୍ଗପୁର district is famous for …-[]',
-         answer: 'ନବରଙ୍ଗପୁର',
-         attempt: '', 
-         position: 15,
-         orientation: '',
-         startx: ,
-         starty: 
+{
+	 clue: "ସୁନ୍ଦରଗଡ଼ district is famous for …-(6)",
+	 answer: "ସୁନ୍ଦରଗଡ଼",
+	 attempt: "", 
+	 position: 14,
+	 orientation: "across",
+	 startx: 1,
+	 starty: 46
 },
-	{
-         clue: 'ନୟାଗଡ଼ district is famous for …-[]',
-         answer: 'ନୟାଗଡ଼',
-         attempt: '', 
-         position: 16,
-         orientation: '',
-         startx: ,
-         starty: 
+{
+	 clue: "ପୁରୀ district is famous for …-(2)",
+	 answer: "ପୁରୀ",
+	 attempt: "", 
+	 position: 15,
+	 orientation: "down",
+	 startx: 6,
+	 starty: 41
 },
-	{
-         clue: 'ନୂଆପଡ଼ା district is famous for …-[]',
-         answer: 'ନୂଆପଡ଼ା',
-         attempt: '', 
-         position: 17,
-         orientation: '',
-         startx: ,
-         starty: 
+{
+	 clue: "ମାଲକାନଗିରି district is famous for …-(6)",
+	 answer: "ମାଲକାନଗିରି",
+	 attempt: "", 
+	 position: 16,
+	 orientation: "down",
+	 startx: 9,
+	 starty: 38
 },
-	{
-         clue: 'ପୁରୀ district is famous for …-[]',
-         answer: 'ପୁରୀ',
-         attempt: '', 
-         position: 18,
-         orientation: '',
-         startx: ,
-         starty: 
+{
+	 clue: "ରାୟଗଡ଼ା district is famous for …-(4)",
+	 answer: "ରାୟଗଡ଼ା",
+	 attempt: "", 
+	 position: 17,
+	 orientation: "across",
+	 startx: 2,
+	 starty: 48
 },
-	{
-         clue: 'ବରଗଡ଼ district is famous for …-[]',
-         answer: 'ବରଗଡ଼',
-         attempt: '', 
-         position: 19,
-         orientation: '',
-         startx: ,
-         starty: 
+{
+	 clue: "ନୟାଗଡ଼ district is famous for …-(4)",
+	 answer: "ନୟାଗଡ଼",
+	 attempt: "", 
+	 position: 18,
+	 orientation: "across",
+	 startx: 9,
+	 starty: 41
 },
-	{
-         clue: 'ବଲାଙ୍ଗୀର district is famous for …-[]',
-         answer: 'ବଲାଙ୍ଗୀର',
-         attempt: '', 
-         position: 20,
-         orientation: '',
-         startx: ,
-         starty: 
+{
+	 clue: "ଦେବଗଡ଼ district is famous for …-(4)",
+	 answer: "ଦେବଗଡ଼",
+	 attempt: "", 
+	 position: 19,
+	 orientation: "down",
+	 startx: 11,
+	 starty: 39
 },
-	{
-         clue: 'ବାଲେଶ୍ୱର district is famous for …-[]',
-         answer: 'ବାଲେଶ୍ୱର',
-         attempt: '', 
-         position: 21,
-         orientation: '',
-         startx: ,
-         starty: 
+{
+	 clue: "ଗଞ୍ଜାମ district is famous for …-(4)",
+	 answer: "ଗଞ୍ଜାମ",
+	 attempt: "", 
+	 position: 20,
+	 orientation: "down",
+	 startx: 4,
+	 starty: 48
 },
-	{
-         clue: 'ବୌଦ୍ଧ district is famous for …-[]',
-         answer: 'ବୌଦ୍ଧ',
-         attempt: '', 
-         position: 22,
-         orientation: '',
-         startx: ,
-         starty: 
+{
+	 clue: "ମୟୂରଭଞ୍ଜ district is famous for …-(6)",
+	 answer: "ମୟୂରଭଞ୍ଜ",
+	 attempt: "", 
+	 position: 21,
+	 orientation: "across",
+	 startx: 4,
+	 starty: 51
 },
-	{
-         clue: 'ଭଦ୍ରକ district is famous for …-[]',
-         answer: 'ଭଦ୍ରକ',
-         attempt: '', 
-         position: 23,
-         orientation: '',
-         startx: ,
-         starty: 
+{
+	 clue: "ବରଗଡ଼ district is famous for …-(4)",
+	 answer: "ବରଗଡ଼",
+	 attempt: "", 
+	 position: 22,
+	 orientation: "down",
+	 startx: 6,
+	 starty: 50
 },
-	{
-         clue: 'ମୟୂରଭଞ୍ଜ district is famous for …-[]',
-         answer: 'ମୟୂରଭଞ୍ଜ',
-         attempt: '', 
-         position: 24,
-         orientation: '',
-         startx: ,
-         starty: 
+{
+	 clue: "ଯାଜପୁର district is famous for …-(4)",
+	 answer: "ଯାଜପୁର",
+	 attempt: "", 
+	 position: 23,
+	 orientation: "down",
+	 startx: 9,
+	 starty: 50
 },
 
 			] 
@@ -231,9 +231,3 @@
 	})
 	
 })(jQuery)
-	
-	
-	
-	
-	
-	

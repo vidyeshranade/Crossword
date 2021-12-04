@@ -25,15 +25,6 @@
 	 starty: 20
 },
 {
-	 clue: "सागर district is famous for …-(3)",
-	 answer: "सागर",
-	 attempt: "", 
-	 position: 2,
-	 orientation: "down",
-	 startx: 8,
-	 starty: 20
-},
-{
 	 clue: "आगर district is famous for …-(3)",
 	 answer: "आगर",
 	 attempt: "", 
@@ -104,15 +95,6 @@
 	 orientation: "across",
 	 startx: 4,
 	 starty: 28
-},
-{
-	 clue: "उज्जैन district is famous for …-(3)",
-	 answer: "उज्जैन",
-	 attempt: "", 
-	 position: 11,
-	 orientation: "down",
-	 startx: 7,
-	 starty: 25
 },
 {
 	 clue: "उज्जैन district is famous for …-(3)",
@@ -212,15 +194,6 @@
 	 orientation: "across",
 	 startx: 4,
 	 starty: 36
-},
-{
-	 clue: "ग्वालियर district is famous for …-(4)",
-	 answer: "ग्वालियर",
-	 attempt: "", 
-	 position: 20,
-	 orientation: "down",
-	 startx: 11,
-	 starty: 29
 },
 {
 	 clue: "ग्वालियर district is famous for …-(4)",

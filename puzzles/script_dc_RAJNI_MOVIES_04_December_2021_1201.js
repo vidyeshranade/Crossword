@@ -304,7 +304,7 @@
 	 starty: 31
 },
 {
-	 clue: ""Shankar G. ""Dadhu"" Dayal"/ "சங்கர் ஜி. ""தாது"" தயாள்"-(3)",
+	 clue: "Shankar G. Dadhu Dayal/ சங்கர் ஜி. தாது தயாள்-(3)",
 	 answer: "தியாகி",
 	 attempt: "", 
 	 position: 32,
