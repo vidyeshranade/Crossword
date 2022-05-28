@@ -28,19 +28,23 @@ $(document).ready(function(){
 
 			// VR: changed from ol to ul to remove the Ordered Number on list item
 			this.after('<div class="w3-container">');
+			this.after('<button id="showPreviousAttempt" title= "Use this if you have solved this puzzle earlier"  class="w3-btn w3-red w3-margin-right" style="width:15%">Restore Previous Answers</button>');
+			this.after('</div>'); //  class="w3-container"
+
+			this.after('<div class="w3-container">');
 			// this.after('<button id="uniqueSolved" class="w3-btn w3-blue  w3-left-align" style="width:15%">Is Solved?</button>');
-			this.after('<button id="showFullSoln"  class="w3-btn w3-green w3-margin-right" style="width:15%">All Answers</button>');
-			this.after('<button id="showCurrentSoln"  class="w3-btn w3-green w3-margin-right" style="width:15%">Current Answer</button>');
+			this.after('<button id="showFullSoln" title= "To show all answers of the puzzle"  class="w3-btn w3-green w3-margin-right" style="width:15%">All Answers</button>');
+			this.after('<button id="showCurrentSoln" title= "To show answer of the current/ selected clue"   class="w3-btn w3-green w3-margin-right" style="width:15%">Current Answer</button>');
 			this.after('</div>'); //  class="w3-container"
 
 			this.after('<div class="w3-container">');
-			this.after('<button id="showSolnLastLetter"  class="w3-btn w3-blue w3-margin-right" style="width:15%">All Last Letter</button>');
-			this.after('<button id="showSolnFirstLetter" class="w3-btn w3-blue  w3-margin-right" style="width:15%">All First Letter</button>');
+			this.after('<button id="showSolnLastLetter" title= "To Last Letter of ALL clues"  class="w3-btn w3-blue w3-margin-right" style="width:15%">All Last Letter</button>');
+			this.after('<button id="showSolnFirstLetter" title= "To First Letter of ALL clues"  class="w3-btn w3-blue  w3-margin-right" style="width:15%">All First Letter</button>');
 			this.after('</div>'); //  class="w3-container"
 
 			this.after('<div class="w3-container">');
-			this.after('<button id="showSolnLastLetterCurrent" class="w3-btn w3-lime  w3-margin-right" style="width:15%">Current Last Letter</button>');
-			this.after('<button id="showSolnFirstLetterCurrent" class="w3-btn w3-lime  w3-margin-right" style="width:15%">Current First Letter</button>');
+			this.after('<button id="showSolnLastLetterCurrent" title= "To only Last Letter of the current/ selected clue"  class="w3-btn w3-lime  w3-margin-right" style="width:15%">Current Last Letter</button>');
+			this.after('<button id="showSolnFirstLetterCurrent" title= "To only First Letter of the current/ selected clue"   class="w3-btn w3-lime  w3-margin-right" style="width:15%">Current First Letter</button>');
 			this.after('</div>'); //  class="w3-container"
 
 			this.after('<div class="w3-container">');
@@ -339,6 +343,13 @@ $(document).ready(function(){
 							// the reason/ root cause for this is .entry-i class number starts with 1. 
 							$groupedLights.eq(0)
 								.append('<span>' + puzz.data[i-1].position + '</span>');
+
+							// Retrieve key from localstorage (if visited earlier)
+							/*
+							title = document.getElementById("note3").innerHTML;
+							keyName = title + '_' + puzz.data[activePosition].startx + ',' + puzz.data[activePosition].starty  + '^' + puzz.data[activePosition].orientation;
+							localStorage.getItem(keyName);
+							*/
 						}
 					}	
 					
@@ -357,7 +368,13 @@ $(document).ready(function(){
 				
 					for (var x=1, p = entryCount; x <= p; ++x) {
 						//var letters = puzz.data[x-1].answer.split('');
-						var attempt = puzz.data[x-1].attempt.split('');		// retrieved user's attempt - useful when rebuilding puzzle with user attempts
+						// var attempt = puzz.data[x-1].attempt.split('');		// retrieved user's attempt - useful when rebuilding puzzle with user attempts
+						
+						// get the value into localStorage
+						title = document.getElementById("note3").innerHTML;
+						keyName = title + '_' + puzz.data[activePosition].startx + ',' + puzz.data[activePosition].starty  + '^' + puzz.data[activePosition].orientation
+						var attempt = localStorage.getItem(keyName);
+						
 						console.log(attempt);
 				
 						console.log("entries["+(x-1)+"]",entries[x-1]);		// co-ords of cell - col,row, ["1,1", "2,1", "3,1", "4,1"]
@@ -403,6 +420,8 @@ $(document).ready(function(){
 					}
 				
 				},
+
+				
 				
 				// to show the solution of currently selected/ active clue
 				/* Logic:
@@ -461,16 +480,84 @@ $(document).ready(function(){
 										
 				},
 				/*
+					Retrieve the previously solved correct answers stored into localStorage
+				*/
+				getPreviousAttemptSoln: function(keyValue, startCoord, orientation) {
+					
+					let ans = keyValue;
+					let currOrientation = orientation;
+
+					let splittedWord4 = [];
+							
+					let a4 = SplitIndicWord(ans)
+					res4 = {}
+					while (!res4.done) {
+						res4 = a4.next();
+						if (res4.value) {
+							splittedWord4.push(res4.value);
+							// console.log(res4.value);
+						}
+					}
+
+					// set the currentFirstCoord as passed value in startCoord
+					let currentFirstCoord = startCoord;
+
+					for(let j = 0; j<$actives.length; j++) {
+														
+						if (currOrientation === 'across') {
+							let x2Coord = parseInt(currentFirstCoord.substr(0, currentFirstCoord.indexOf(','))) + j;
+							newCoord = x2Coord + currentFirstCoord.substr(currentFirstCoord.indexOf(','));
+						}
+						else {
+							let y2Coord = parseInt(currentFirstCoord.substr(currentFirstCoord.indexOf(',') + 1)) + j;
+							newCoord = currentFirstCoord.substr(0, currentFirstCoord.indexOf(',') + 1) + y2Coord;
+						}
+						
+						// $("[data-coords='" + newCoord + "'].position-" + activePosition + " input").val(splittedWord4[j]);
+						$("[data-coords='" + newCoord + "'] input").val(splittedWord4[j]);
+						
+					}
+				},
+				callgetPreviousAttemptSoln: function() {
+
+					var arrayOfKeys = Object.keys(localStorage);
+					var title = document.getElementById("note3").innerHTML;
+					var titleArrayOfKeys = filterItems(arrayOfKeys, title);
+	
+					for (var i in titleArrayOfKeys) {
+						var key = titleArrayOfKeys[i];
+						var keyValue = localStorage.getItem(titleArrayOfKeys[i]);
+	
+						var startCoord = key.slice(
+							key.indexOf("_") + 1, 
+							key.lastIndexOf("^")
+						);
+	
+						var orientation = key.slice(
+							key.lastIndexOf("^") + 1
+						);
+						// goto that td element
+						// $("[data-coords='" + startCoord + "'].position-" + activePosition + " input").focus()
+						//puzInit.getCurrentSoln(myTrim(keyData));
+						puzInit.getPreviousAttemptSoln(keyValue, startCoord, orientation)
+					}
+				},
+	
+				/*
 					- Checks current entry input group value against answer
 					- If not complete, auto-selects next input for user
 				*/
 				checkAnswer: function(e) {
 					
-					var valToCheck, currVal;
+					var valToCheck, currVal, keyName, title;
 					
 					util.getActivePositionFromClassGroup($(e.target));
 				
 					valToCheck = puzz.data[activePosition].answer.toLowerCase();
+					title = document.getElementById("note3").innerHTML;
+					// keyName = title + '_' + puzz.data[activePosition].startx + ',' + puzz.data[activePosition].starty  + '^' + puzz.data[activePosition].orientation
+					let currentFirstCoord = $("input.active:first")[0].parentNode.attributes[0].nodeValue;
+					keyName = title + '_' + currentFirstCoord  + '^' + puzz.data[activePosition].orientation
 
 					// VR: added to remove trailing space
 					currVal = $('.position-' + activePosition + ' input')
@@ -484,7 +571,7 @@ $(document).ready(function(){
 						.join('');
 						
 					
-					console.log(currVal + "|" + valToCheck);
+					// console.log(currVal + "|" + valToCheck);
 					if(valToCheck === currVal){	
 						$('.active')
 							.addClass('done')
@@ -494,6 +581,9 @@ $(document).ready(function(){
 
 						solved.push(valToCheck);
 						solvedToggle = true;
+
+						// set the value into localStorage
+						localStorage.setItem(keyName, currVal);
 
 						// update the score
 						// $("#yourScore").text("Your Score is: " + solved.length + " / " + puzz.data.length).css("color", "green", "font-weight", "bold")
@@ -864,6 +954,12 @@ $(document).ready(function(){
 		
 			}
 			
+			
+			$("#showPreviousAttempt").click(function() {
+				puzInit.callgetPreviousAttemptSoln();
+			});
+
+
 			
 			$("#showCurrentSoln").click(function(){
 				puzInit.getCurrentSoln();

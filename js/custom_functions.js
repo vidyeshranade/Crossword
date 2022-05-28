@@ -5,6 +5,7 @@
   function setData2(title) {
     var obj1 = getData2(title);
     document.getElementById("loadPuzzFile").src = "puzzles/" + obj1.src;
+    document.getElementById("note3").innerHTML = title;
     document.getElementById("note2").innerHTML = obj1.note2;
     document.getElementById("note1").innerHTML = "F5: to reload | Spacebar or Enter Key: Moves to next cell | Tab: Moves to next clue | ^v to paste answer"
     alert( "You time starts now...");
@@ -347,3 +348,11 @@ function myTrim(x) {
 }
 
   
+/**
+ * Filter array items based on search criteria (query)
+ */
+function filterItems(arr, query) {
+  return arr.filter(function(el) {
+    return el.toLowerCase().indexOf(query.toLowerCase()) !== -1
+  })
+}
