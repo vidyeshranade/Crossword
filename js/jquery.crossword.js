@@ -502,7 +502,8 @@ $(document).ready(function(){
 					// set the currentFirstCoord as passed value in startCoord
 					let currentFirstCoord = startCoord;
 
-					for(let j = 0; j<$actives.length; j++) {
+					// for(let j = 0; j<$actives.length; j++) {
+					for(let j = 0; j<splittedWord4.length; j++) {
 														
 						if (currOrientation === 'across') {
 							let x2Coord = parseInt(currentFirstCoord.substr(0, currentFirstCoord.indexOf(','))) + j;
