@@ -73,6 +73,14 @@
         "src": "script_dc_RAJNI_MOVIES_04_December_2021_1201.js",
         "note2":  "<b>Note: </b>Identify Rajnikant's Movie Name in Tamil for Tamil/ English Role Name as a Clues"
    },
+     "ilaiS001": {
+        "src": "script_dc_SANSKRUT_MARATHI_WORDS_02_February_2023_2010.js",
+        "note2":  "<b>Note: </b>Identify संस्कृत word for मराठी Clues"
+   },
+     "ilaiS002": {
+        "src": "script_dc_SANSKRUT_MARATHI_WORDS_02_February_2023_2001.js",
+        "note2":  "<b>Note: </b>Identify संस्कृत word for मराठी Clues."
+   },
      "hms91": {
     "src": "script_dc_song2movie_26_March_2021_1225.js",									
     "note2":  "<b>Note: </b>आपको गाने की FIRST लाइन  से मूव्ही/ Movie को पहचानें."
@@ -171,6 +179,38 @@
    },
     "hms185": {
       "src": "script_dc_हसरत_30_June_2021_1339.js",	
+      "note2":  "<b>Note: </b>Identify Line2/ लाइन 2 को पहचानें."
+   },
+    "hms306": {
+      "src": "script_dc_BAPPIDA_SONGS_25_February_2022_1125.js",	
+      "note2":  "<b>Note: </b>Identify Line2/ लाइन 2 को पहचानें."
+   },
+    "601": {
+      "src": "script_dc_LATA_DIDI_SONGS_25_February_2022_1134.js",	
+      "note2":  "<b>Note: </b>Identify Line2/ लाइन 2 को पहचानें."
+   },
+    "602": {
+      "src": "script_dc_LATA_DIDI_SONGS_25_February_2022_1144.js",	
+      "note2":  "<b>Note: </b>Identify Line2/ लाइन 2 को पहचानें."
+   },
+    "603": {
+      "src": "script_dc_LATA_DIDI_SONGS_25_February_2022_1641.js",	
+      "note2":  "<b>Note: </b>Identify Line2/ लाइन 2 को पहचानें."
+   },
+    "604": {
+      "src": "script_dc_LATA_DIDI_SONGS_25_February_2022_1646.js",	
+      "note2":  "<b>Note: </b>Identify Line2/ लाइन 2 को पहचानें."
+   },
+    "605": {
+      "src": "script_dc_LATA_DIDI_SONGS_25_February_2022_1705.js",	
+      "note2":  "<b>Note: </b>Identify Line2/ लाइन 2 को पहचानें."
+   },
+    "606": {
+      "src": "script_dc_LATA_DIDI_SONGS_25_February_2022_1707.js",	
+      "note2":  "<b>Note: </b>Identify Line2/ लाइन 2 को पहचानें."
+   },
+    "607": {
+      "src": "script_dc_LATA_DIDI_SONGS_23_November_2022_1854.js",	
       "note2":  "<b>Note: </b>Identify Line2/ लाइन 2 को पहचानें."
    },
     "hms201": {
