@@ -185,31 +185,31 @@
       "src": "script_dc_BAPPIDA_SONGS_25_February_2022_1125.js",	
       "note2":  "<b>Note: </b>Identify Line2/ लाइन 2 को पहचानें."
    },
-    "601": {
+    "hms601": {
       "src": "script_dc_LATA_DIDI_SONGS_25_February_2022_1134.js",	
       "note2":  "<b>Note: </b>Identify Line2/ लाइन 2 को पहचानें."
    },
-    "602": {
+    "hms602": {
       "src": "script_dc_LATA_DIDI_SONGS_25_February_2022_1144.js",	
       "note2":  "<b>Note: </b>Identify Line2/ लाइन 2 को पहचानें."
    },
-    "603": {
+    "hms603": {
       "src": "script_dc_LATA_DIDI_SONGS_25_February_2022_1641.js",	
       "note2":  "<b>Note: </b>Identify Line2/ लाइन 2 को पहचानें."
    },
-    "604": {
+    "hms604": {
       "src": "script_dc_LATA_DIDI_SONGS_25_February_2022_1646.js",	
       "note2":  "<b>Note: </b>Identify Line2/ लाइन 2 को पहचानें."
    },
-    "605": {
+    "hms605": {
       "src": "script_dc_LATA_DIDI_SONGS_25_February_2022_1705.js",	
       "note2":  "<b>Note: </b>Identify Line2/ लाइन 2 को पहचानें."
    },
-    "606": {
+    "hms606": {
       "src": "script_dc_LATA_DIDI_SONGS_25_February_2022_1707.js",	
       "note2":  "<b>Note: </b>Identify Line2/ लाइन 2 को पहचानें."
    },
-    "607": {
+    "hms607": {
       "src": "script_dc_LATA_DIDI_SONGS_23_November_2022_1854.js",	
       "note2":  "<b>Note: </b>Identify Line2/ लाइन 2 को पहचानें."
    },
