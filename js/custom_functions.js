@@ -50,7 +50,7 @@
         "note2":  "<b>Note: </b>Identify Answers in ଓଡିଆ for English/ ଓଡିଆ Clues"
    },
      "ilseKA001": {
-        "src": "script_dc_Kannada_by_Vishnuvardhan_Karmathi.js",
+        "src": "script_dc_karnataka_v1_by_vivek_kamath.js",
         "note2":  "<b>Note: </b>Identify Districts of Karnataka in ಕನ್ನಡ for ಕನ್ನಡ Clues"
    },
      "ilseTE001": {

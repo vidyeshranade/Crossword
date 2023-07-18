@@ -58716,6 +58716,7 @@ function IndicWordLength (devWord) {
     var wordLength = 0;
     var pattern1 = /LETTER/
     var pattern2 = /SIGN VIRAMA/   // to capture halant
+    var pattern2_1 = /SIGN VISARGA/   // to capture VISARGA/ colon
     var pattern3 = /LATIN/
     var charCategory = ""
     var charCounter = 0
@@ -58729,6 +58730,11 @@ function IndicWordLength (devWord) {
             if (charCounter == devWord.length ) {
                 // pass
             } else {
+                wordLength--;
+            }
+        } else if (charCategory.search(pattern2_1) > 0)  {
+            // reduce when it is a last character
+            if (charCounter == devWord.length ) {
                 wordLength--;
             }
         } else if (charCategory.search(pattern3) > 0)  {

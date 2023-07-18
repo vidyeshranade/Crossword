@@ -7,7 +7,7 @@
 		// two entries: an across entry and a down entry
 		var puzzleData = [
 {
-	 clue: "ବାଲେଶ୍ୱର district is famous for …-(5)",
+	 clue: "XXXXX district is famous as missile city of Odisha …-(5)",
 	 answer: "ବାଲେଶ୍ୱର",
 	 attempt: "", 
 	 position: 1,
@@ -16,7 +16,7 @@
 	 starty: 28
 },
 {
-	 clue: "ଝାରସୁଗୁଡ଼ା district is famous for …-(5)",
+	 clue: "XXXXX district is known as Powerhouse of Odisha and  …-(5)",
 	 answer: "ଝାରସୁଗୁଡ଼ା",
 	 attempt: "", 
 	 position: 2,
@@ -25,7 +25,7 @@
 	 starty: 32
 },
 {
-	 clue: "ନୂଆପଡ଼ା district is famous for …-(4)",
+	 clue: "XXXX district is famous for Kharakhai waterfall and the Sunabeda wildlife sanctuary-(4)",
 	 answer: "ନୂଆପଡ଼ା",
 	 attempt: "", 
 	 position: 3,
@@ -34,7 +34,7 @@
 	 starty: 29
 },
 {
-	 clue: "ସୁବର୍ଣ୍ଣପୁର district is famous for …-(7)",
+	 clue: "XXXXX district is famous for Asias one of biggest Cattle Fair-(5)",
 	 answer: "ସୁବର୍ଣ୍ଣପୁର",
 	 attempt: "", 
 	 position: 4,
@@ -43,7 +43,7 @@
 	 starty: 32
 },
 {
-	 clue: "କଳାହାଣ୍ଡି district is famous for …-(5)",
+	 clue: "XXXX district is famous for Saptasajya Temple, and the Kapilash Temple-(4)",
 	 answer: "କଳାହାଣ୍ଡି",
 	 attempt: "", 
 	 position: 5,
@@ -52,7 +52,7 @@
 	 starty: 35
 },
 {
-	 clue: "କଟକ district is famous for …-(3)",
+	 clue: "XXX district is famous for Bali Jatra-(3)",
 	 answer: "କଟକ",
 	 attempt: "", 
 	 position: 5,
@@ -61,7 +61,7 @@
 	 starty: 35
 },
 {
-	 clue: "ଭଦ୍ରକ district is famous for …-(4)",
+	 clue: "XXX district is famous for Akhandalamani Temple and Kali Puja-(3)",
 	 answer: "ଭଦ୍ରକ",
 	 attempt: "", 
 	 position: 6,
@@ -70,7 +70,7 @@
 	 starty: 38
 },
 {
-	 clue: "ସମ୍ବଲପୁର district is famous for …-(6)",
+	 clue: XXXXX district is famous for Hirakud Dam-(5)",
 	 answer: "ସମ୍ବଲପୁର",
 	 attempt: "", 
 	 position: 7,
@@ -79,7 +79,7 @@
 	 starty: 41
 },
 {
-	 clue: "ନବରଙ୍ଗପୁର district is famous for …-(7)",
+	 clue: "XXXXXX district is largest district of Odisha by area…-(6)",
 	 answer: "ନବରଙ୍ଗପୁର",
 	 attempt: "", 
 	 position: 8,
@@ -88,7 +88,7 @@
 	 starty: 40
 },
 {
-	 clue: "କେନ୍ଦୁଝର district is famous for …-(5)",
+	 clue: "XXXX district is famous for Bhim Kund and Hadagarh-(4)",
 	 answer: "କେନ୍ଦୁଝର",
 	 attempt: "", 
 	 position: 9,
@@ -97,7 +97,7 @@
 	 starty: 37
 },
 {
-	 clue: "କନ୍ଧମାଳ district is famous for …-(5)",
+	 clue: "XXXX district is famous for Dokra, Terra-Cotta, Cane, and Bamboo-(4)",
 	 answer: "କନ୍ଧମାଳ",
 	 attempt: "", 
 	 position: 10,
@@ -106,7 +106,7 @@
 	 starty: 38
 },
 {
-	 clue: "ବଲାଙ୍ଗୀର district is famous for …-(5)",
+	 clue: "XXXX district is famous for Ranipur-Jharial archaeological site-(4)",
 	 answer: "ବଲାଙ୍ଗୀର",
 	 attempt: "", 
 	 position: 11,
@@ -115,7 +115,7 @@
 	 starty: 43
 },
 {
-	 clue: "ଅନୁଗୋଳ district is famous for …-(4)",
+	 clue: "XXXX district is famous for Satkosia Gorge Wildlife Sanctuary and the Ansupa Lake-(4)",
 	 answer: "ଅନୁଗୋଳ",
 	 attempt: "", 
 	 position: 12,
@@ -124,7 +124,7 @@
 	 starty: 35
 },
 {
-	 clue: "କେନ୍ଦ୍ରାପଡ଼ା district is famous for …-(6)",
+	 clue: "XXXX district is famous for Bhitarkanika National Park-(4)",
 	 answer: "କେନ୍ଦ୍ରାପଡ଼ା",
 	 attempt: "", 
 	 position: 13,
@@ -133,7 +133,7 @@
 	 starty: 45
 },
 {
-	 clue: "ସୁନ୍ଦରଗଡ଼ district is famous for …-(6)",
+	 clue: "XXXXX district is famous for Rourkela Steel Plant-(5)",
 	 answer: "ସୁନ୍ଦରଗଡ଼",
 	 attempt: "", 
 	 position: 14,
@@ -142,7 +142,7 @@
 	 starty: 46
 },
 {
-	 clue: "ପୁରୀ district is famous for …-(2)",
+	 clue: "XX district is famous for Lord Jagannath-(2)",
 	 answer: "ପୁରୀ",
 	 attempt: "", 
 	 position: 15,
@@ -151,7 +151,7 @@
 	 starty: 41
 },
 {
-	 clue: "ମାଲକାନଗିରି district is famous for …-(6)",
+	 clue: "XXXXXX district is famous for …-(6)",
 	 answer: "ମାଲକାନଗିରି",
 	 attempt: "", 
 	 position: 16,
@@ -160,7 +160,7 @@
 	 starty: 38
 },
 {
-	 clue: "ରାୟଗଡ଼ା district is famous for …-(4)",
+	 clue: "XXXX district is famous for Bauxite reserves and Dongria Kondh tribe-(4)",
 	 answer: "ରାୟଗଡ଼ା",
 	 attempt: "", 
 	 position: 17,
@@ -169,7 +169,7 @@
 	 starty: 48
 },
 {
-	 clue: "ନୟାଗଡ଼ district is famous for …-(4)",
+	 clue: "XXXX district is famous for Satkosia Tiger Reserve-(4)",
 	 answer: "ନୟାଗଡ଼",
 	 attempt: "", 
 	 position: 18,
@@ -178,7 +178,7 @@
 	 starty: 41
 },
 {
-	 clue: "ଦେବଗଡ଼ district is famous for …-(4)",
+	 clue: "XXXX district is famous for Pradhanpat Waterfall-(4)",
 	 answer: "ଦେବଗଡ଼",
 	 attempt: "", 
 	 position: 19,
@@ -187,7 +187,7 @@
 	 starty: 39
 },
 {
-	 clue: "ଗଞ୍ଜାମ district is famous for …-(4)",
+	 clue: "XXX district is famous for Chilika Lake-(3)",
 	 answer: "ଗଞ୍ଜାମ",
 	 attempt: "", 
 	 position: 20,
@@ -196,7 +196,7 @@
 	 starty: 48
 },
 {
-	 clue: "ମୟୂରଭଞ୍ଜ district is famous for …-(6)",
+	 clue: "XXXXX district is famous for Simplipal National Park-(5)",
 	 answer: "ମୟୂରଭଞ୍ଜ",
 	 attempt: "", 
 	 position: 21,
@@ -205,7 +205,7 @@
 	 starty: 51
 },
 {
-	 clue: "ବରଗଡ଼ district is famous for …-(4)",
+	 clue: "XXXX district is famous as Bhata Handi-(4)",
 	 answer: "ବରଗଡ଼",
 	 attempt: "", 
 	 position: 22,
@@ -214,7 +214,7 @@
 	 starty: 50
 },
 {
-	 clue: "ଯାଜପୁର district is famous for …-(4)",
+	 clue: "XXXX district is famous for Biraja Temple-(4)",
 	 answer: "ଯାଜପୁର",
 	 attempt: "", 
 	 position: 23,
