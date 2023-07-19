@@ -70,7 +70,7 @@
 	 starty: 38
 },
 {
-	 clue: XXXXX district is famous for Hirakud Dam-(5)",
+	 clue: "XXXXX district is famous for Hirakud Dam-(5)",
 	 answer: "ସମ୍ବଲପୁର",
 	 attempt: "", 
 	 position: 7,
